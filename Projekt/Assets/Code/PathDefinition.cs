@@ -4,13 +4,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+/// <summary>
+/// klasa PathDefinition
+/// </summary>
+
 public class PathDefinition : MonoBehaviour 
 {
-    // Punkty sciezki
+    /// Punkty sciezki
     public Transform[] Points;
 
-    // Enumerator punktow w sciezce. 
-    // Zapewnia poruszanie sie np. platform w obie strony po sciezce.
+    /// Enumerator punktow w sciezce. 
+    /// Zapewnia poruszanie sie np. platform w obie strony po sciezce.
     public IEnumerator<Transform> GetPathEnumerator()
     {
         if (Points == null || Points.Length < 1)
@@ -33,9 +37,9 @@ public class PathDefinition : MonoBehaviour
         }
     }
 
-    // Rysowanie linii miedzy punktami sciezki w Scene view,
-    // upewniajac sie czy istnieje odpowiednia ilosc punktow
-    // i omijajac usuniete.
+    /// Rysowanie linii miedzy punktami sciezki w Scene view,
+    /// upewniajac sie czy istnieje odpowiednia ilosc punktow
+    /// i omijajac usuniete.
     public void OnDrawGizmos()
     {
         if (Points == null || Points.Length < 2)
