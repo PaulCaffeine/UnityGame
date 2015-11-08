@@ -1,0 +1,97 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+klasa \hyperlink{class_player}{Player}  
+
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}{Start} ()
+\item 
+void \hyperlink{class_player_aace80372e18e32fe177e295fe5d93ba8}{Update} ()
+\begin{DoxyCompactList}\small\item\em Wywolywane dla kazdej klatki animacji gry. Wywolanie metody Handle\+Imput(), obslugujacej nacisniecie klawiszy przez gracza. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a6d893d1229110e7eb17eb7d895198717}{Handle\+Input} ()
+\begin{DoxyCompactList}\small\item\em Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot. Nacisniecie spacji wykonuje skok. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_player_a00cb3f26349dd5f58ad0a6135b763a07}{Max\+Speed} = 8
+\begin{DoxyCompactList}\small\item\em Maksymalna liczba jednostek na sekunde, jakie gracz moze przejsc. \end{DoxyCompactList}\item 
+float \hyperlink{class_player_ae1d47d3f4f67909f7498d900c1feedfa}{Speed\+Acceleration\+On\+Ground} = 10f
+\begin{DoxyCompactList}\small\item\em Jak szybko moze zmienic sie predkosc gracza na ziemi. \end{DoxyCompactList}\item 
+float \hyperlink{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}{Speed\+Acceleration\+In\+Air} = 5f
+\begin{DoxyCompactList}\small\item\em Jak szybko moze zmienic sie predkosc gracza w powietrzu \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+klasa \hyperlink{class_player}{Player} 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_a6d893d1229110e7eb17eb7d895198717}{}\index{Player@{Player}!Handle\+Input@{Handle\+Input}}
+\index{Handle\+Input@{Handle\+Input}!Player@{Player}}
+\subsubsection[{Handle\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Handle\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_a6d893d1229110e7eb17eb7d895198717}
+
+
+Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot. Nacisniecie spacji wykonuje skok. 
+
+\hypertarget{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}{}\index{Player@{Player}!Start@{Start}}
+\index{Start@{Start}!Player@{Player}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}
+Jesli gracz jest obrocony, wartosc local\+Scale.\+x bedzie mniejsza od 0. \hypertarget{class_player_aace80372e18e32fe177e295fe5d93ba8}{}\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_aace80372e18e32fe177e295fe5d93ba8}
+
+
+Wywolywane dla kazdej klatki animacji gry. Wywolanie metody Handle\+Imput(), obslugujacej nacisniecie klawiszy przez gracza. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_player_a00cb3f26349dd5f58ad0a6135b763a07}{}\index{Player@{Player}!Max\+Speed@{Max\+Speed}}
+\index{Max\+Speed@{Max\+Speed}!Player@{Player}}
+\subsubsection[{Max\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Max\+Speed = 8}\label{class_player_a00cb3f26349dd5f58ad0a6135b763a07}
+
+
+Maksymalna liczba jednostek na sekunde, jakie gracz moze przejsc. 
+
+\hypertarget{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}{}\index{Player@{Player}!Speed\+Acceleration\+In\+Air@{Speed\+Acceleration\+In\+Air}}
+\index{Speed\+Acceleration\+In\+Air@{Speed\+Acceleration\+In\+Air}!Player@{Player}}
+\subsubsection[{Speed\+Acceleration\+In\+Air}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Speed\+Acceleration\+In\+Air = 5f}\label{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}
+
+
+Jak szybko moze zmienic sie predkosc gracza w powietrzu 
+
+\hypertarget{class_player_ae1d47d3f4f67909f7498d900c1feedfa}{}\index{Player@{Player}!Speed\+Acceleration\+On\+Ground@{Speed\+Acceleration\+On\+Ground}}
+\index{Speed\+Acceleration\+On\+Ground@{Speed\+Acceleration\+On\+Ground}!Player@{Player}}
+\subsubsection[{Speed\+Acceleration\+On\+Ground}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Speed\+Acceleration\+On\+Ground = 10f}\label{class_player_ae1d47d3f4f67909f7498d900c1feedfa}
+
+
+Jak szybko moze zmienic sie predkosc gracza na ziemi. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Player.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{class_follow_path}{}\section{Follow\+Path Class Reference}
+\label{class_follow_path}\index{Follow\+Path@{Follow\+Path}}
+
+
+klasa \hyperlink{class_follow_path}{Follow\+Path}  
+
+
+Inheritance diagram for Follow\+Path\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_follow_path}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_follow_path_aa15222ed17c7bb53f199e5cb5e5c9cef}{}enum \hyperlink{class_follow_path_aa15222ed17c7bb53f199e5cb5e5c9cef}{Follow\+Type} \{ {\bfseries Move\+Towards}, 
+{\bfseries Lerp}
+ \}\label{class_follow_path_aa15222ed17c7bb53f199e5cb5e5c9cef}
+\begin{DoxyCompactList}\small\item\em Wybor trybu ruchu. Lerp -\/ wykorzystujacy interpolacje liniowa. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_follow_path_a5e1828cf1cf7744c062a58e4a0d29605}{}void \hyperlink{class_follow_path_a5e1828cf1cf7744c062a58e4a0d29605}{Start} ()\label{class_follow_path_a5e1828cf1cf7744c062a58e4a0d29605}
+
+\begin{DoxyCompactList}\small\item\em Inicjalizacja. \end{DoxyCompactList}\item 
+void \hyperlink{class_follow_path_a157ad1da8560085de3542e46050d7183}{Update} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_follow_path_a923cc736d703c012d1b6d8874291fa35}{}\hyperlink{class_follow_path_aa15222ed17c7bb53f199e5cb5e5c9cef}{Follow\+Type} \hyperlink{class_follow_path_a923cc736d703c012d1b6d8874291fa35}{Type} = Follow\+Type.\+Move\+Towards\label{class_follow_path_a923cc736d703c012d1b6d8874291fa35}
+
+\begin{DoxyCompactList}\small\item\em Typ. \end{DoxyCompactList}\item 
+\hypertarget{class_follow_path_a14f4aab3adc712c07ae9a02b87ffb2e3}{}\hyperlink{class_path_definition}{Path\+Definition} \hyperlink{class_follow_path_a14f4aab3adc712c07ae9a02b87ffb2e3}{Path}\label{class_follow_path_a14f4aab3adc712c07ae9a02b87ffb2e3}
+
+\begin{DoxyCompactList}\small\item\em Ścieżka. \end{DoxyCompactList}\item 
+\hypertarget{class_follow_path_a366b7ad38c7db477e1217ae5c364ac2b}{}float \hyperlink{class_follow_path_a366b7ad38c7db477e1217ae5c364ac2b}{Speed} = 1\label{class_follow_path_a366b7ad38c7db477e1217ae5c364ac2b}
+
+\begin{DoxyCompactList}\small\item\em Prękość \end{DoxyCompactList}\item 
+\hypertarget{class_follow_path_a7fd1ef16a8e77196e526d285197ed847}{}float \hyperlink{class_follow_path_a7fd1ef16a8e77196e526d285197ed847}{Max\+Distance\+To\+Goal} = .\+1f\label{class_follow_path_a7fd1ef16a8e77196e526d285197ed847}
+
+\begin{DoxyCompactList}\small\item\em Maksymalna odległość \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+klasa \hyperlink{class_follow_path}{Follow\+Path} 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_follow_path_a157ad1da8560085de3542e46050d7183}{}\index{Follow\+Path@{Follow\+Path}!Update@{Update}}
+\index{Update@{Update}!Follow\+Path@{Follow\+Path}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Follow\+Path.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_follow_path_a157ad1da8560085de3542e46050d7183}
+Obiekt stworzony bez sciezki, albo ze sciezka ktora nie ma co najmniej jednego punktu.
+
+Argumenty\+: obecna pozycja, pozycja docelowa, predkosc (skalowana przez delta\+Time, aby zapewnic plynnosc animacji).
+
+Sprawdzenie czy osiagnelismy cel i mozemy przemiescic sie do kolejnego punktu. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Follow\+Path.\+cs\end{DoxyCompactItemize}
