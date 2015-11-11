@@ -1,0 +1,126 @@
+\hypertarget{class_camera_controller}{}\section{Camera\+Controller Class Reference}
+\label{class_camera_controller}\index{Camera\+Controller@{Camera\+Controller}}
+
+
+klasa \hyperlink{class_camera_controller}{Camera\+Controller}  
+
+
+Inheritance diagram for Camera\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}{Start} ()
+\begin{DoxyCompactList}\small\item\em Ustawienie ograniczeń rozmiaru obszaru, w którym może się poruszać kamera, oraz ustawienie podążania kamery za graczem. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}{Update} ()
+\begin{DoxyCompactList}\small\item\em Metoda Update \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \hyperlink{class_camera_controller_a0028f1f6c8d940c36cfb6f6ea77b8658}{Player}
+\begin{DoxyCompactList}\small\item\em Obiekt gracza. \end{DoxyCompactList}\item 
+Vector2 \hyperlink{class_camera_controller_a8c93ba738eeff2eb5af4bc2bc4ec3f10}{Margin}
+\begin{DoxyCompactList}\small\item\em Wartość progu ruchu gracza, od którego ma nastapić zmiana położenia kamery. \end{DoxyCompactList}\item 
+Vector2 \hyperlink{class_camera_controller_aaa266990dfb97f6e19d4dd6489f683ef}{Smoothing}
+\begin{DoxyCompactList}\small\item\em Zapewnienie płynności ruchu kamery. \end{DoxyCompactList}\item 
+Box\+Collider2\+D \hyperlink{class_camera_controller_aad472aa9d9410f6b05884b0d4d336d45}{Bounds}
+\begin{DoxyCompactList}\small\item\em Ograniczenia ruchu kamery w świecie gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_camera_controller_a1eb503b3ec9f5c4b2f267e859ba37467}{Is\+Following}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Zmienna, mówiąca, czy kamera podąża za graczem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+klasa \hyperlink{class_camera_controller}{Camera\+Controller} 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}{}\index{Camera\+Controller@{Camera\+Controller}!Start@{Start}}
+\index{Start@{Start}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Controller.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}
+
+
+Ustawienie ograniczeń rozmiaru obszaru, w którym może się poruszać kamera, oraz ustawienie podążania kamery za graczem. 
+
+\hypertarget{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}{}\index{Camera\+Controller@{Camera\+Controller}!Update@{Update}}
+\index{Update@{Update}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Controller.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_controller_a7c4f486f4bcbd1d54a346fdce9707bd5}
+
+
+Metoda Update 
+
+Obecne położenie kamery.
+
+Jeśli odległość między położeniem kamery, a położeniem gracza w poziomie jest większa od danej wartości.
+
+Wykonaj ruch kamery z pozycji x do pozycji gracza, z określonym efektem płynności w grze.
+
+Jeśli odległość między położeniem kamery, a położeniem gracza w pionie jest większa od danej wartości.
+
+Wykonaj ruch kamery z pozycji y do pozycji gracza, z określonym efektem płynności w grze.
+
+camera.\+ortographic\+Size to połowa wysokości boxu kamery. Mnożymy tę wartośc przez stosunek szerokości do wysokości, aby otrzymać połowę szerokości boxu kamery.
+
+Ograniczanie położenia kamery (x,y) do rozmiarów Bounds, czyli boxu ograniczającego ruch kamery w świecie gry.
+
+Ustawienie uaktualnionej pozycji kamery. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_camera_controller_aad472aa9d9410f6b05884b0d4d336d45}{}\index{Camera\+Controller@{Camera\+Controller}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Bounds}]{\setlength{\rightskip}{0pt plus 5cm}Box\+Collider2\+D Camera\+Controller.\+Bounds}\label{class_camera_controller_aad472aa9d9410f6b05884b0d4d336d45}
+
+
+Ograniczenia ruchu kamery w świecie gry. 
+
+\hypertarget{class_camera_controller_a8c93ba738eeff2eb5af4bc2bc4ec3f10}{}\index{Camera\+Controller@{Camera\+Controller}!Margin@{Margin}}
+\index{Margin@{Margin}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Margin}]{\setlength{\rightskip}{0pt plus 5cm}Vector2 Camera\+Controller.\+Margin}\label{class_camera_controller_a8c93ba738eeff2eb5af4bc2bc4ec3f10}
+
+
+Wartość progu ruchu gracza, od którego ma nastapić zmiana położenia kamery. 
+
+\hypertarget{class_camera_controller_a0028f1f6c8d940c36cfb6f6ea77b8658}{}\index{Camera\+Controller@{Camera\+Controller}!Player@{Player}}
+\index{Player@{Player}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}Transform Camera\+Controller.\+Player}\label{class_camera_controller_a0028f1f6c8d940c36cfb6f6ea77b8658}
+
+
+Obiekt gracza. 
+
+\hypertarget{class_camera_controller_aaa266990dfb97f6e19d4dd6489f683ef}{}\index{Camera\+Controller@{Camera\+Controller}!Smoothing@{Smoothing}}
+\index{Smoothing@{Smoothing}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Smoothing}]{\setlength{\rightskip}{0pt plus 5cm}Vector2 Camera\+Controller.\+Smoothing}\label{class_camera_controller_aaa266990dfb97f6e19d4dd6489f683ef}
+
+
+Zapewnienie płynności ruchu kamery. 
+
+
+
+\subsection{Property Documentation}
+\hypertarget{class_camera_controller_a1eb503b3ec9f5c4b2f267e859ba37467}{}\index{Camera\+Controller@{Camera\+Controller}!Is\+Following@{Is\+Following}}
+\index{Is\+Following@{Is\+Following}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Is\+Following}]{\setlength{\rightskip}{0pt plus 5cm}bool Camera\+Controller.\+Is\+Following\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_camera_controller_a1eb503b3ec9f5c4b2f267e859ba37467}
+
+
+Zmienna, mówiąca, czy kamera podąża za graczem. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Camera\+Controller.\+cs\end{DoxyCompactItemize}

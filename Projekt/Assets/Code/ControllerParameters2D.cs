@@ -2,10 +2,14 @@
 using System.Collections;
 using System;
 
+/// <summary>
+/// klasa ControllerParameters2D
+/// </summary>
+
 [Serializable]
 public class ControllerParameters2D 
 {
-    // Czy mozna wykonac skok i w jakich okolicznosciach.
+    /// Czy mozna wykonac skok i w jakich okolicznosciach.
     public enum JumpBehavior
     {
         CanJumpOnGround,
@@ -13,18 +17,20 @@ public class ControllerParameters2D
         CantJump
     }
 
-    // Ustawienie maksymalnej predkosci gracza.
+    /// Ustawienie maksymalnej predkosci gracza.
     public Vector2 MaxVelocity = new Vector2(float.MaxValue, float.MaxValue);
 
-    // Nie mozna wejsc na teren o nachyleniu wiekszym od 30 stopni. 
-    // Ustalenie grawitacji, dopusczalnej czestotliwosci skokow i ich sily.
+    /// Nie mozna wejsc na teren o nachyleniu wiekszym od 30 stopni. 
+    /// Ustalenie grawitacji, dopusczalnej czestotliwosci skokow i ich sily.
     [Range(0,90)]
+	///SlopeLimit
     public float SlopeLimit = 30;
+	///Grawitacja
     public float Gravity = -25f;
-
+	///JumpRestrictions
     public JumpBehavior JumpRestrictions;
-
+	/// Częstotliwość skoku
     public float JumpFrequency = .25f;
-
+	/// Siła skoku
     public float JumpMagnitude = 12;
 }
