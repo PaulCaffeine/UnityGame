@@ -28,17 +28,33 @@ public class Player : MonoBehaviour
 	/// </summary>
     public float SpeedAccelerationInAir = 5f;
 
+    /// <summary>
+    /// Maksymalna wartość punktów zdrowia.
+    /// </summary>
     public int MaxHealth = 100;
+    /// <summary>
+    /// Efekt wyzwalany podczas otrzymania obrażeń.
+    /// </summary>
     public GameObject OuchEffect;
 
+    /// <summary>
+    /// Wartośc punktów zdrowia.
+    /// </summary>
     public int Health { get; private set; }
+    /// <summary>
+    /// Zmienna bool służąca do zapamiętania informacji o śmierci gracza.
+    /// </summary>
     public bool IsDead { get; private set; }
 
+    /// <summary>
+    /// Ustawinie początkowych ustawień gracza.
+    /// </summary>
     public void Awake()
     {
         _controller = GetComponent<CharacterController2D>();
         /// Jesli gracz jest obrocony, wartosc localScale.x bedzie mniejsza od 0.
         _isFacingRight = transform.localScale.x > 0;
+        /// Punkty zdrowia mają wartość maksymalną.
         Health = MaxHealth;
     }
 	/// <summary>
@@ -60,6 +76,9 @@ public class Player : MonoBehaviour
             _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
     }
 
+    /// <summary>
+    /// Zresetowanie ustawień gracza po śmierci.
+    /// </summary>
     public void Kill()
     {
         _controller.HandleCollisions = false;
@@ -67,9 +86,14 @@ public class Player : MonoBehaviour
         IsDead = true;
         Health = 0;
 
+        /// Gracz lekko podskakuje pionowo po śmierci.
         _controller.SetForce(new Vector2(0, 20));
     }
 
+    /// <summary>
+    /// Respawnowanie gracza w danym punkcie i zmiana jego ustawień początkowych.
+    /// </summary>
+    /// <param name="spawnPoint"></param>
     public void RespawnAt(Transform spawnPoint)
     {
         if (!_isFacingRight)
@@ -83,6 +107,12 @@ public class Player : MonoBehaviour
         transform.position = spawnPoint.position;
     }
 
+    /// <summary>
+    /// Inicjowanie efektu obrażeń gracza (czerwona chmura cząsteczek) 
+    /// oraz zmniejszenie punktów zdrowia gracza po zadanych obrażeniach,
+    /// prowadzące ewentualnie do jego śmierci.
+    /// </summary>
+    /// <param name="damage"></param>
     public void TakeDamage(int damage)
     {
         Instantiate(OuchEffect, transform.position, transform.rotation);

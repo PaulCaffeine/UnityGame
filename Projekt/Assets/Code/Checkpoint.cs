@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Klasa odpowiedzilna za respawn gracza w danym checkpoincie.
+/// </summary>
 public class Checkpoint : MonoBehaviour
 {
     private List<IPlayerRespawnListener> _listeners;

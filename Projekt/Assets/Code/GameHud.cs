@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Klasa odpowiedzialna za wyświetlanie komunikatu o zdobytych punktach
+/// za zebranie gwiazdek i dojście do nowego checkpointu (bonus czasowy).
+/// </summary>
 public class GameHud : MonoBehaviour
 {
     public GUISkin Skin;
