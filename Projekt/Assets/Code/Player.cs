@@ -115,6 +115,9 @@ public class Player : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamage(int damage)
     {
+
+        FloatingText.Show(string.Format("-{0}", damage), "PlayerTakeDamageText", new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
+
         Instantiate(OuchEffect, transform.position, transform.rotation);
         Health -= damage;
 
