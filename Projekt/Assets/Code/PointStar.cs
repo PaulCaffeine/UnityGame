@@ -27,6 +27,7 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
         Instantiate(Effect, transform.position, transform.rotation);
 
         gameObject.SetActive(false);
+        FloatingText.Show(string.Format("+{0}!", PointsToAdd), "PointStarText", new FromWorldPointTextPositioner(Camera.main, transform.position, 1.5f, 50)); /// metoda wyswietli tekst przez 1,5s, bedzie on sie poruszal z predkoscia 50 pixeli na sekunde
     }
 
     /// <summary>
