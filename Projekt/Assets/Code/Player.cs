@@ -3,7 +3,7 @@ using System.Collections;
 /// <summary>
 /// klasa Player
 /// </summary>
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour, ITakeDamage
 {
 	/// <summary>
     /// Czy gracz jest zwrocony w prawo.
@@ -36,7 +36,22 @@ public class Player : MonoBehaviour
     /// Efekt wyzwalany podczas otrzymania obrażeń.
     /// </summary>
     public GameObject OuchEffect;
-
+	/// <summary>
+	/// Piła
+	/// </summary>
+	public Projectile Projectile;
+	/// <summary>
+	/// Częstotliwość z którą strzela
+	/// </summary>
+	public float FireRate;
+	/// <summary>
+	/// Lokalizacja Piły.
+	/// </summary>
+	public Transform ProjectileFireLocation;
+	/// <summary>
+	/// Fire projectile effect.
+	/// </summary>
+	public GameObject FireProjectileEffect;
     /// <summary>
     /// Wartośc punktów zdrowia.
     /// </summary>
@@ -45,9 +60,13 @@ public class Player : MonoBehaviour
     /// Zmienna bool służąca do zapamiętania informacji o śmierci gracza.
     /// </summary>
     public bool IsDead { get; private set; }
+	/// <summary>
+	/// Jeżeli gracz może strzelać
+	/// </summary>
+	private float _canFireIn;
 
     /// <summary>
-    /// Ustawinie początkowych ustawień gracza.
+    /// Ustawianie początkowych ustawień gracza.
     /// </summary>
     public void Awake()
     {
@@ -65,6 +84,7 @@ public class Player : MonoBehaviour
 	/// </summary>
     public void Update()
     {
+		_canFireIn -= Time.deltaTime;
         if (!IsDead)
             HandleInput();
 
@@ -113,7 +133,7 @@ public class Player : MonoBehaviour
     /// prowadzące ewentualnie do jego śmierci.
     /// </summary>
     /// <param name="damage"></param>
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, GameObject instagator)
     {
 
         FloatingText.Show(string.Format("-{0}", damage), "PlayerTakeDamageText", new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
@@ -152,7 +172,28 @@ public class Player : MonoBehaviour
         {
             _controller.Jump();
         }
+		if (Input.GetMouseButtonDown(0))
+						FireProjectile ();
     }
+
+	private void FireProjectile()
+	{
+		if (_canFireIn > 0)
+						return;
+
+		if (FireProjectileEffect != null) {
+						var effect = (GameObject) Instantiate(FireProjectileEffect, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
+						effect.transform.parent = transform;
+				}
+
+		var direction = _isFacingRight ? Vector2.right : -Vector2.right;
+
+		var projectile = (Projectile) Instantiate(Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
+		projectile.Initialize(gameObject, direction, _controller.Velocity);
+
+		_canFireIn = FireRate;
+
+	}
 	/// <summary>
     /// Obrocenie gracza w poziomie.
 	/// </summary>
