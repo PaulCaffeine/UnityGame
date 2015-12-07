@@ -52,6 +52,11 @@ public class Player : MonoBehaviour, ITakeDamage
 	/// Fire projectile effect.
 	/// </summary>
 	public GameObject FireProjectileEffect;
+
+    public AudioClip PlayerHitSound;
+    public AudioClip PlayerShootSound;
+    public AudioClip PlayerHealthSound;
+
     /// <summary>
     /// Wartośc punktów zdrowia.
     /// </summary>
@@ -96,6 +101,13 @@ public class Player : MonoBehaviour, ITakeDamage
             _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
     }
 
+    public void FinishLevel()
+    {
+        enabled = false;
+        _controller.enabled = false;
+        collider2D.enabled = false;
+    }
+
     /// <summary>
     /// Zresetowanie ustawień gracza po śmierci.
     /// </summary>
@@ -135,7 +147,7 @@ public class Player : MonoBehaviour, ITakeDamage
     /// <param name="damage"></param>
     public void TakeDamage(int damage, GameObject instagator)
     {
-
+        AudioSource.PlayClipAtPoint(PlayerHitSound, transform.position);
         FloatingText.Show(string.Format("-{0}", damage), "PlayerTakeDamageText", new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
 
         Instantiate(OuchEffect, transform.position, transform.rotation);
@@ -144,6 +156,17 @@ public class Player : MonoBehaviour, ITakeDamage
         if (Health <= 0)
             LevelManager.Instance.KillPlayer();
     }
+
+
+
+    public void GiveHealth(int health, GameObject instagator)
+    {
+        AudioSource.PlayClipAtPoint(PlayerHealthSound, transform.position);
+        FloatingText.Show(string.Format("+{0}!", health), "PlayerGotHealthText", new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
+        Health += Mathf.Min(Health + health, MaxHealth);
+    }
+
+
 
 	/// <summary>
     /// Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot.
@@ -192,6 +215,8 @@ public class Player : MonoBehaviour, ITakeDamage
 		projectile.Initialize(gameObject, direction, _controller.Velocity);
 
 		_canFireIn = FireRate;
+
+        AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
 
 	}
 	/// <summary>

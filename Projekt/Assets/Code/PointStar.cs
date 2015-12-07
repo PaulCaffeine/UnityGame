@@ -14,6 +14,8 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
     /// </summary>
     public int PointsToAdd = 10;
 
+    public AudioClip HitStarSound;
+
     /// <summary>
     /// Po wejściu na gwiazdkę inicjowany jest efekt, a sam obiekt znika.
     /// </summary>
@@ -22,6 +24,9 @@ public class PointStar : MonoBehaviour, IPlayerRespawnListener
     {
         if (other.GetComponent<Player>() == null)
             return;
+
+        if (HitStarSound != null)
+            AudioSource.PlayClipAtPoint(HitStarSound, transform.position);
 
         GameManager.Instance.AddPoints(PointsToAdd);
         Instantiate(Effect, transform.position, transform.rotation);
