@@ -1,16 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\SimpleEnemyAi.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\Player.cs">
     <Files>
-      <File FileName="Assets\Code\SortParticleSystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Code\PathedProjectileSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Code\GiveDamageToPlayer.cs" Line="24" Column="6" />
-      <File FileName="Assets\Code\PathedProjectile.cs" Line="17" Column="23" />
-      <File FileName="Assets\Code\Projectile.cs" Line="12" Column="49" />
-      <File FileName="Assets\Code\ITakeDamage.cs" Line="1" Column="19" />
-      <File FileName="Assets\Code\SimpleProjectile.cs" Line="16" Column="3" />
-      <File FileName="Assets\Code\Player.cs" Line="136" Column="61" />
-      <File FileName="Assets\Code\SimpleEnemyAi.cs" Line="10" Column="44" />
+      <File FileName="Assets\Code\Player.cs" Line="166" Column="54" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

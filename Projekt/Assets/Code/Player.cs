@@ -163,7 +163,8 @@ public class Player : MonoBehaviour, ITakeDamage
     {
         AudioSource.PlayClipAtPoint(PlayerHealthSound, transform.position);
         FloatingText.Show(string.Format("+{0}!", health), "PlayerGotHealthText", new FromWorldPointTextPositioner(Camera.main, transform.position, 2f, 60f));
-        Health += Mathf.Min(Health + health, MaxHealth);
+		///Health += Mathf.Min(Health + health, MaxHealth);
+        Health = Mathf.Min(Health + health, MaxHealth);
     }
 
 
