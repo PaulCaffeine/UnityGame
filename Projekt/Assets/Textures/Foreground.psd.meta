@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 3912e6d80636b6b4ebced023d97b2cb4
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Mushroom
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 827
+        height: 784
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Halfdirt
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1811
+        width: 386
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dirt
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 1663
+        width: 385
+        height: 385
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Healthpack
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1417
+        width: 326
+        height: 326
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1067
+        width: 501
+        height: 565
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 884
+        width: 292
+        height: 266
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Punji Sticks
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 939
+        width: 388
+        height: 381
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stones
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 927
+        height: 805
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Saw
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 676
+        width: 227
+        height: 214
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big Saw
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 576
+        width: 354
+        height: 357
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tiny Saw
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 539
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Coin
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 325
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 36
+        width: 723
+        height: 87
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Canon
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 179
+        width: 738
+        height: 355
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
