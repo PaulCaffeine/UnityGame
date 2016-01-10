@@ -1,7 +1,15 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Klasa ograniczająca mozliwy ruch gracza jedynie 
+/// w zakresie widzialnego istniejącego poziomu.
+/// </summary>
 public class PlayerBounds : MonoBehaviour
 {
+    /// <summary>
+    /// Możliwe opcje akcji po przekroczeniu przez gracza dozwolonych granic poziomu,
+    /// czyli nie robienie niczego, śmierć, lub ograniczenie ruchu.
+    /// </summary>
     public enum BoundsBehavior
     {
         Nothing,
@@ -18,12 +26,19 @@ public class PlayerBounds : MonoBehaviour
     private Player _player;
     private BoxCollider2D _boxCollider;
 
+    /// <summary>
+    /// Inicjalizacja obiektu gracza i box collidera.
+    /// </summary>
     public void Start()
     {
         _player = GetComponent<Player>();
         _boxCollider = GetComponent<BoxCollider2D>();
     }
 
+    /// <summary>
+    /// Korygowanie położenia gracza po przekroczeniu granic poziomu, uwzględniając granice:
+    /// górną, dolną, po prawej stronie ekranu oraz po lewej stronie ekranu.
+    /// </summary>
     public void Update()
     {
         if (_player.IsDead)
@@ -52,6 +67,12 @@ public class PlayerBounds : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Funkcja zabijająca gracza lub korygująca jego położenie,
+    /// w zależności od wartości parametru behavior typu BoundsBehavior.
+    /// </summary>
+    /// <param name="behavior"></param>
+    /// <param name="constrainedPosition"></param>
     private void ApplyBoundsBehavior(BoundsBehavior behavior, Vector2 constrainedPosition)
     {
         if (behavior == BoundsBehavior.Kill)

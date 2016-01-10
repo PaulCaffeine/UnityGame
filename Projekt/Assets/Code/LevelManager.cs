@@ -153,22 +153,37 @@ public class LevelManager : MonoBehaviour
         _started = DateTime.UtcNow;
     }
 
+    /// <summary>
+    /// Metoda uruchamiająca procedurę przejścia do następnego poziomu.
+    /// </summary>
+    /// <param name="levelName"></param>
     public void GotoNextLevel(string levelName)
     {
         StartCoroutine(GotoNextLevelCo(levelName));
     }
 
+    /// <summary>
+    /// Procedura przejścia do nastepnego poziomu.
+    /// </summary>
+    /// <param name="levelName"></param>
+    /// <returns></returns>
     private IEnumerator GotoNextLevelCo(string levelName)
     {
+        /// Odwołanie się do metody FinishLevel gracza, która 
+        /// tymczasowo deaktywuje część jego właściwości.
         Player.FinishLevel();
+        /// Dodanie punktów premii czasowej.
         GameManager.Instance.AddPoints(CurrentTimeBonus);
 
+        /// Wyświetlenie komunikatu ukończenia poziomu.
         FloatingText.Show("Level Complete!", "CheckpointText", new CenteredTextPositioner(.2f));
         yield return new WaitForSeconds(1);
 
+        /// Wyświetlenie ilości zdobytych punktów.
         FloatingText.Show(string.Format("{0} points!", GameManager.Instance.Points), "CheckpointText", new CenteredTextPositioner(.1f));
         yield return new WaitForSeconds(5f);
 
+        /// Wczytanie następnego poziomu.
         if (string.IsNullOrEmpty(levelName))
             Application.LoadLevel("StartScreen");
         else

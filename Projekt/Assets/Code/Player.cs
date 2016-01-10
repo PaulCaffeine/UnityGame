@@ -53,9 +53,20 @@ public class Player : MonoBehaviour, ITakeDamage
 	/// </summary>
 	public GameObject FireProjectileEffect;
 
+    /// <summary>
+    /// Dźwięk odtwarzany po trafieniu gracza przez wroga.
+    /// </summary>
     public AudioClip PlayerHitSound;
+    /// <summary>
+    /// Dźwięk odtwarzany po wystrzeleniu pocisku przez gracza.
+    /// </summary>
     public AudioClip PlayerShootSound;
+    /// <summary>
+    /// Dźwięk odtwarzany po zebraniu apteczki przez gracza.
+    /// </summary>
     public AudioClip PlayerHealthSound;
+
+    public Animator Animator;
 
     /// <summary>
     /// Wartośc punktów zdrowia.
@@ -89,7 +100,8 @@ public class Player : MonoBehaviour, ITakeDamage
 	/// </summary>
     public void Update()
     {
-		_canFireIn -= Time.deltaTime;
+        /// Aktualizacja czasu przeładowywania broni.
+        _canFireIn -= Time.deltaTime;
         if (!IsDead)
             HandleInput();
 
@@ -99,8 +111,17 @@ public class Player : MonoBehaviour, ITakeDamage
             _controller.SetHorizontalForce(0);
         else
             _controller.SetHorizontalForce(Mathf.Lerp(_controller.Velocity.x, _normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
+
+        Animator.SetBool("IsGrounded", _controller.State.IsGrounded);
+        Animator.SetBool("IsDead", IsDead);
+        /// Ustawienie wartości prędkości jako liczby między 0, a 1.
+        Animator.SetFloat("Speed", Mathf.Abs(_controller.Velocity.x) / MaxSpeed);
     }
 
+    /// <summary>
+    /// Metoda uruchamiana po przejściu danego poziomu gry.
+    /// Deaktywuje ona BoxCollider2D i ruch gracza.
+    /// </summary>
     public void FinishLevel()
     {
         enabled = false;
@@ -157,8 +178,11 @@ public class Player : MonoBehaviour, ITakeDamage
             LevelManager.Instance.KillPlayer();
     }
 
-
-
+    /// <summary>
+    /// Dodanie punktów zdrowia po zebraniu apteczki.
+    /// </summary>
+    /// <param name="health"></param>
+    /// <param name="instagator"></param>
     public void GiveHealth(int health, GameObject instagator)
     {
         AudioSource.PlayClipAtPoint(PlayerHealthSound, transform.position);
@@ -166,8 +190,6 @@ public class Player : MonoBehaviour, ITakeDamage
 		///Health += Mathf.Min(Health + health, MaxHealth);
         Health = Mathf.Min(Health + health, MaxHealth);
     }
-
-
 
 	/// <summary>
     /// Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot.
@@ -200,25 +222,35 @@ public class Player : MonoBehaviour, ITakeDamage
 						FireProjectile ();
     }
 
+    /// <summary>
+    /// Metoda odpowiadająca za wystrzelenie pocisku przez gracza.
+    /// </summary>
 	private void FireProjectile()
 	{
-		if (_canFireIn > 0)
+        /// Sprawdzenie, czy upłynął czas ładowania broni.
+        if (_canFireIn > 0)
 						return;
 
+        /// Ustawienie obiektu efektu wystrzału i umiejscowanie go w grze.
 		if (FireProjectileEffect != null) {
 						var effect = (GameObject) Instantiate(FireProjectileEffect, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
 						effect.transform.parent = transform;
 				}
 
+        /// Ustalenie kierunku strzału na podstawie 
+        /// aktualnego zwrotu postaci gracza.
 		var direction = _isFacingRight ? Vector2.right : -Vector2.right;
 
+        /// Oddanie strzału.
 		var projectile = (Projectile) Instantiate(Projectile, ProjectileFireLocation.position, ProjectileFireLocation.rotation);
 		projectile.Initialize(gameObject, direction, _controller.Velocity);
 
+        /// Ustawienie, zmniejszanej w metodzie Update, wartości częstotliwości oddawania strzałów przez gracza.
 		_canFireIn = FireRate;
 
         AudioSource.PlayClipAtPoint(PlayerShootSound, transform.position);
 
+        Animator.SetTrigger("Fire");
 	}
 	/// <summary>
     /// Obrocenie gracza w poziomie.

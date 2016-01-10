@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Klasa odpowiedzialna za przejście do następnego poziomu,
+/// po wejściu w obszar zmiany poziomu.
+/// </summary>
 public class FinishLevel : MonoBehaviour
 {
     public string LevelName;

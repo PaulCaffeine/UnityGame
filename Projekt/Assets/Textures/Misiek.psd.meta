@@ -1,6 +1,26 @@
 fileFormatVersion: 2
 guid: 06ed7fa5cdf653b4f993840f7792973c
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: brew
+    21300002: ucho2
+    21300004: ucho1
+    21300006: glowa
+    21300008: rzesy
+    21300010: ucho wew
+    21300012: oko
+    21300014: oko wew
+    21300016: pyszczek
+    21300018: usta
+    21300020: nps
+    21300022: reka2
+    21300024: reka1
+    21300026: ozdoba
+    21300028: brzuch
+    21300030: ogon
+    21300032: noga2
+    21300034: noga1
+    21300036: Misiek_20
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
