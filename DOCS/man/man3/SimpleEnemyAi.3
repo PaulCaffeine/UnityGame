@@ -1,0 +1,158 @@
+.TH "SimpleEnemyAi" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimpleEnemyAi \- Klasa odpowiadająca za podstawowe działania przeciwnika w świecie gry\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour, \fBITakeDamage\fP i \fBIPlayerRespawnListener\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.RI "\fIUstawienie parametrów początkowych: kontrolera, kierunku i pozycji początkowej\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIAktualizacja położenia przeciwnika oraz obsługa strzelania pociskami\&. \fP"
+.ti -1c
+.RI "void \fBTakeDamage\fP (int damage, GameObject instigator)"
+.br
+.RI "\fIMetoda wywoływana po otrzymaniu obrażeń od gracza\&. \fP"
+.ti -1c
+.RI "void \fBOnPlayerRespawnInThisCheckpoint\fP (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+.br
+.RI "\fIZrespawnowanie przeciwnika w danym checkpoincie razem z graczem\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "float \fBSpeed\fP"
+.br
+.RI "\fIPrędkość przeciwnika\&. \fP"
+.ti -1c
+.RI "float \fBFireRate\fP = 1"
+.br
+.RI "\fICzęstotliwość oddawania strzałów przez przeciwnika\&. \fP"
+.ti -1c
+.RI "\fBProjectile\fP \fBProjectile\fP"
+.br
+.RI "\fIPocisk\&. \fP"
+.ti -1c
+.RI "GameObject \fBDestroyedEffect\fP"
+.br
+.RI "\fIEfekt zniszczenia przeciwnika\&. \fP"
+.ti -1c
+.RI "int \fBPointsToGivePlayer\fP"
+.br
+.RI "\fIPunkty przyznawane graczowi za zestrzelenie przeciwnika\&. \fP"
+.ti -1c
+.RI "AudioClip \fBShootSound\fP"
+.br
+.RI "\fIDwięk strzału przeciwnika\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiadająca za podstawowe działania przeciwnika w świecie gry\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void SimpleEnemyAi\&.OnPlayerRespawnInThisCheckpoint (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+
+.PP
+Zrespawnowanie przeciwnika w danym checkpoincie razem z graczem\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIcheckpoint\fP 
+.br
+\fIplayer\fP 
+.RE
+.PP
+Ustawienie jego kierunku\&.
+.PP
+Ustawienie jego skali w świecie gry jako domyœlnej\&.
+.PP
+Ustawienie pozycji początkowej\&.
+.PP
+Aktywowanie obiektu przeciwnika w świecie gry\&. 
+.PP
+Implementuje \fBIPlayerRespawnListener\fP\&.
+.SS "void SimpleEnemyAi\&.Start ()"
+
+.PP
+Ustawienie parametrów początkowych: kontrolera, kierunku i pozycji początkowej\&. Domyślnie porusza się w lewo\&. 
+.SS "void SimpleEnemyAi\&.TakeDamage (int damage, GameObject instigator)"
+
+.PP
+Metoda wywoływana po otrzymaniu obrażeń od gracza\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdamage\fP 
+.br
+\fIinstigator\fP 
+.RE
+.PP
+Przyznanie punktów graczowi za zestrzelenie wroga\&.
+.PP
+Uruchomeinie efektu zestrzelenia przeciwnika\&.
+.PP
+Ustawienie obiektu przeciwnika jako niekatywnego\&. 
+.PP
+Implementuje \fBITakeDamage\fP\&.
+.SS "void SimpleEnemyAi\&.Update ()"
+
+.PP
+Aktualizacja położenia przeciwnika oraz obsługa strzelania pociskami\&. Wykonanie ruchu przez przeciwnika\&.
+.PP
+Po napotkaniu przeszkody, przeciwnik porusza się w odwrotnym kierunku\&.
+.PP
+Sprawdzenie czy upłynął czas potrzebny do wystrzelenia nowrgo pocisku\&.
+.PP
+Sprawdzenie czy gracz zostaje trafiony przez pocisk (jest w zasięgu strzału przeciwnika)\&.
+.PP
+Stworzenie zmiennej pocisku\&.
+.PP
+Inicjalizacja pocisku z ustawioną prędkością i kierunkiem\&.
+.PP
+Ustawienie częstotliowości oddawania strzałów\&.
+.PP
+Uruchomienie dźwięku wystrzału pocisku przez przeciwnika\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "GameObject SimpleEnemyAi\&.DestroyedEffect"
+
+.PP
+Efekt zniszczenia przeciwnika\&. 
+.SS "float SimpleEnemyAi\&.FireRate = 1"
+
+.PP
+Częstotliwość oddawania strzałów przez przeciwnika\&. 
+.SS "int SimpleEnemyAi\&.PointsToGivePlayer"
+
+.PP
+Punkty przyznawane graczowi za zestrzelenie przeciwnika\&. 
+.SS "\fBProjectile\fP SimpleEnemyAi\&.Projectile"
+
+.PP
+Pocisk\&. 
+.SS "AudioClip SimpleEnemyAi\&.ShootSound"
+
+.PP
+Dwięk strzału przeciwnika\&. 
+.SS "float SimpleEnemyAi\&.Speed"
+
+.PP
+Prędkość przeciwnika\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

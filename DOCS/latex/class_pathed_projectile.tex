@@ -1,0 +1,123 @@
+\section{Dokumentacja klasy Pathed\+Projectile}
+\label{class_pathed_projectile}\index{Pathed\+Projectile@{Pathed\+Projectile}}
+Diagram dziedziczenia dla Pathed\+Projectile\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pathed_projectile}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Initialize} (Transform destination, float speed)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja celu i prêdkoœci obiektu pocisku. \end{DoxyCompactList}\item 
+void {\bf Update} ()
+\begin{DoxyCompactList}\small\item\em Aktualizacja po³o¿enia pocisku w czasie, oraz obs³uga jego zniszczenia. \end{DoxyCompactList}\item 
+void {\bf Take\+Damage} (int damage, Game\+Object instigator)
+\begin{DoxyCompactList}\small\item\em Metoda wywo³ywana po zestrzeleniu pocisku przez gracza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bf Destroy\+Effect}
+\begin{DoxyCompactList}\small\item\em Efekt towarzysz¹cy zniszczeniu pocisku. \end{DoxyCompactList}\item 
+int {\bf Points\+To\+Give\+Player}
+\begin{DoxyCompactList}\small\item\em Punkty przyznawane graczowi za zestrzelenie pocisku. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Destroy\+Sound}
+\begin{DoxyCompactList}\small\item\em DŸwiêk odtwarzany przy zniszczeniu pocisku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji skÅ‚adowych}
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Initialize(\+Transform destination, float speed)}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile.\+Initialize (
+\begin{DoxyParamCaption}
+\item[{Transform}]{destination, }
+\item[{float}]{speed}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_a12dd7ed82badcadb184ac5a9430705b2}
+
+
+Inicjalizacja celu i prêdkoœci obiektu pocisku. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em destination} & \\
+\hline
+{\em speed} & \\
+\hline
+\end{DoxyParams}
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Take\+Damage(int damage, Game\+Object instigator)}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile.\+Take\+Damage (
+\begin{DoxyParamCaption}
+\item[{int}]{damage, }
+\item[{Game\+Object}]{instigator}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_a5caa718fce400e03378fe8a999daeadc}
+
+
+Metoda wywo³ywana po zestrzeleniu pocisku przez gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em damage} & \\
+\hline
+{\em instigator} & \\
+\hline
+\end{DoxyParams}
+Uruchomienie efektu zniszczenia pocisku.
+
+Zniszczenie obiektu pocisku.
+
+Przyznanie punktów graczowi za zestrzelenie pocisku. 
+
+Implementuje {\bf I\+Take\+Damage} \doxyref{}{str.}{interface_i_take_damage}.
+
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Update@{Update}}
+\index{Update@{Update}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_a51f8264c920fcd82f4d48ea703f88009}
+
+
+Aktualizacja po³o¿enia pocisku w czasie, oraz obs³uga jego zniszczenia. 
+
+Aktualizacja po³o¿enia pocisku w czasie.
+
+Sprawdzenie czy pocisk dotar³ do celu.
+
+Uruchomienie efektu zniszczenia pocisku.
+
+Odtworzenie dŸwiêku zniszczenia pocisku.
+
+Zniszczenie obiektu pocisku, jeœli dotar³ do celu. 
+
+\subsection{Dokumentacja atrybutÃ³w skÅ‚adowych}
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Destroy\+Effect@{Destroy\+Effect}}
+\index{Destroy\+Effect@{Destroy\+Effect}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Destroy\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Pathed\+Projectile.\+Destroy\+Effect}\label{class_pathed_projectile_a332f3a849d5d592e3ecc52c52bbac326}
+
+
+Efekt towarzysz¹cy zniszczeniu pocisku. 
+
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Destroy\+Sound@{Destroy\+Sound}}
+\index{Destroy\+Sound@{Destroy\+Sound}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Destroy\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Pathed\+Projectile.\+Destroy\+Sound}\label{class_pathed_projectile_ab069aa20f20da80567b061e68330b4d3}
+
+
+DŸwiêk odtwarzany przy zniszczeniu pocisku. 
+
+\index{Pathed\+Projectile@{Pathed\+Projectile}!Points\+To\+Give\+Player@{Points\+To\+Give\+Player}}
+\index{Points\+To\+Give\+Player@{Points\+To\+Give\+Player}!Pathed\+Projectile@{Pathed\+Projectile}}
+\subsubsection[{Points\+To\+Give\+Player}]{\setlength{\rightskip}{0pt plus 5cm}int Pathed\+Projectile.\+Points\+To\+Give\+Player}\label{class_pathed_projectile_ab88d75f6caac96633c158f9c275ab3dc}
+
+
+Punkty przyznawane graczowi za zestrzelenie pocisku. 
+
+
+
+Dokumentacja dla tej klasy zostaÅ‚a wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Pathed\+Projectile.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,138 @@
+.TH "SimpleProjectile" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SimpleProjectile \- Klasa potomna dziedzicząca z \fBProjectile\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy \fBProjectile\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIMetoda aktualizująca pozycję pocisku w Unity, oraz odpowiadająca za jego zniszczenie po upływie czasu życia pocisku\&. \fP"
+.ti -1c
+.RI "void \fBTakeDamage\fP (int damage, GameObject instigator)"
+.br
+.RI "\fIMetoda odpowiadająca za zniszczenie pocisku i przyznanie punktów graczowi, jesli uda mu się zestrzelić pocisk przeciwnika\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "int \fBDamage\fP"
+.br
+.RI "\fIObrażenia zadane przez pocisk\&. \fP"
+.ti -1c
+.RI "GameObject \fBDestroyedEffect\fP"
+.br
+.RI "\fIEfekt zniszczenia pocisku\&. \fP"
+.ti -1c
+.RI "int \fBPointsToGiveToPlayer\fP"
+.br
+.RI "\fIPunkty przyznawane graczowi, jeśli uda mu się zniszczyć (w locie) pocisk przeciwnika\&. \fP"
+.ti -1c
+.RI "float \fBTimeToLive\fP"
+.br
+.RI "\fICzas życia pocisku\&. \fP"
+.ti -1c
+.RI "AudioClip \fBDestroySound\fP"
+.br
+.RI "\fIDźwięk odtwarzany przy zniszczeniu pocisku \fP"
+.in -1c
+.SS "Metody chronione"
+
+.in +1c
+.ti -1c
+.RI "override void \fBOnCollideOther\fP (Collider2D other)"
+.br
+.RI "\fIPodczas kolizji z otoczeniem nastąpi zniszczenie pocisku\&. \fP"
+.ti -1c
+.RI "override void \fBOnCollideTakeDamage\fP (Collider2D other, \fBITakeDamage\fP takeDamage)"
+.br
+.RI "\fIMetoda wywoływana po trafieniu przez pocisk obiektu, który może przyjąć obrażenia\&. \fP"
+.in -1c
+.SS "Dodatkowe Dziedziczone Składowe"
+.SH "Opis szczegółowy"
+.PP 
+Klasa potomna dziedzicząca z \fBProjectile\fP\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "override void SimpleProjectile\&.OnCollideOther (Collider2D other)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Podczas kolizji z otoczeniem nastąpi zniszczenie pocisku\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBProjectile\fP\&.
+.SS "override void SimpleProjectile\&.OnCollideTakeDamage (Collider2D other, \fBITakeDamage\fP takeDamage)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Metoda wywoływana po trafieniu przez pocisk obiektu, który może przyjąć obrażenia\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.br
+\fItakeDamage\fP 
+.RE
+.PP
+
+.PP
+Reimplementowana z \fBProjectile\fP\&.
+.SS "void SimpleProjectile\&.TakeDamage (int damage, GameObject instigator)"
+
+.PP
+Metoda odpowiadająca za zniszczenie pocisku i przyznanie punktów graczowi, jesli uda mu się zestrzelić pocisk przeciwnika\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdamage\fP 
+.br
+\fIinstigator\fP 
+.RE
+.PP
+
+.SS "void SimpleProjectile\&.Update ()"
+
+.PP
+Metoda aktualizująca pozycję pocisku w Unity, oraz odpowiadająca za jego zniszczenie po upływie czasu życia pocisku\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "int SimpleProjectile\&.Damage"
+
+.PP
+Obrażenia zadane przez pocisk\&. 
+.SS "GameObject SimpleProjectile\&.DestroyedEffect"
+
+.PP
+Efekt zniszczenia pocisku\&. 
+.SS "AudioClip SimpleProjectile\&.DestroySound"
+
+.PP
+Dźwięk odtwarzany przy zniszczeniu pocisku 
+.SS "int SimpleProjectile\&.PointsToGiveToPlayer"
+
+.PP
+Punkty przyznawane graczowi, jeśli uda mu się zniszczyć (w locie) pocisk przeciwnika\&. 
+.SS "float SimpleProjectile\&.TimeToLive"
+
+.PP
+Czas życia pocisku\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

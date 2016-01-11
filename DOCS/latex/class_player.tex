@@ -1,43 +1,124 @@
-\hypertarget{class_player}{}\section{Player Class Reference}
+\section{Dokumentacja klasy Player}
 \label{class_player}\index{Player@{Player}}
 
 
-klasa \hyperlink{class_player}{Player}  
+klasa \doxyref{Player}{str.}{class_player}  
 
 
-Inheritance diagram for Player\+:\begin{figure}[H]
+Diagram dziedziczenia dla Player\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_player}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\subsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}{Start} ()
-\item 
-void \hyperlink{class_player_aace80372e18e32fe177e295fe5d93ba8}{Update} ()
+void {\bf Awake} ()
+\begin{DoxyCompactList}\small\item\em Ustawianie początkowych ustawień gracza. \end{DoxyCompactList}\item 
+void {\bf Update} ()
 \begin{DoxyCompactList}\small\item\em Wywolywane dla kazdej klatki animacji gry. Wywolanie metody Handle\+Imput(), obslugujacej nacisniecie klawiszy przez gracza. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi. \end{DoxyCompactList}\item 
-void \hyperlink{class_player_a6d893d1229110e7eb17eb7d895198717}{Handle\+Input} ()
+void {\bf Finish\+Level} ()
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiana po przejściu danego poziomu gry. Deaktywuje ona Box\+Collider2\+D i ruch gracza. \end{DoxyCompactList}\item 
+void {\bf Kill} ()
+\begin{DoxyCompactList}\small\item\em Zresetowanie ustawień gracza po śmierci. \end{DoxyCompactList}\item 
+void {\bf Respawn\+At} (Transform spawn\+Point)
+\begin{DoxyCompactList}\small\item\em Respawnowanie gracza w danym punkcie i zmiana jego ustawień początkowych. \end{DoxyCompactList}\item 
+void {\bf Take\+Damage} (int damage, Game\+Object instagator)
+\begin{DoxyCompactList}\small\item\em Inicjowanie efektu obrażeń gracza (czerwona chmura cząsteczek) oraz zmniejszenie punktów zdrowia gracza po zadanych obrażeniach, prowadzące ewentualnie do jego śmierci. \end{DoxyCompactList}\item 
+void {\bf Give\+Health} (int health, Game\+Object instagator)
+\begin{DoxyCompactList}\small\item\em Dodanie punktów zdrowia po zebraniu apteczki. \end{DoxyCompactList}\item 
+void {\bf Handle\+Input} ()
 \begin{DoxyCompactList}\small\item\em Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot. Nacisniecie spacji wykonuje skok. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Public Attributes}
+\subsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
-float \hyperlink{class_player_a00cb3f26349dd5f58ad0a6135b763a07}{Max\+Speed} = 8
+float {\bf Max\+Speed} = 8
 \begin{DoxyCompactList}\small\item\em Maksymalna liczba jednostek na sekunde, jakie gracz moze przejsc. \end{DoxyCompactList}\item 
-float \hyperlink{class_player_ae1d47d3f4f67909f7498d900c1feedfa}{Speed\+Acceleration\+On\+Ground} = 10f
+float {\bf Speed\+Acceleration\+On\+Ground} = 10f
 \begin{DoxyCompactList}\small\item\em Jak szybko moze zmienic sie predkosc gracza na ziemi. \end{DoxyCompactList}\item 
-float \hyperlink{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}{Speed\+Acceleration\+In\+Air} = 5f
-\begin{DoxyCompactList}\small\item\em Jak szybko moze zmienic sie predkosc gracza w powietrzu \end{DoxyCompactList}\end{DoxyCompactItemize}
+float {\bf Speed\+Acceleration\+In\+Air} = 5f
+\begin{DoxyCompactList}\small\item\em Jak szybko moze zmienic sie predkosc gracza w powietrzu \end{DoxyCompactList}\item 
+int {\bf Max\+Health} = 100
+\begin{DoxyCompactList}\small\item\em Maksymalna wartość punktów zdrowia. \end{DoxyCompactList}\item 
+Game\+Object {\bf Ouch\+Effect}
+\begin{DoxyCompactList}\small\item\em Efekt wyzwalany podczas otrzymania obrażeń. \end{DoxyCompactList}\item 
+{\bf Projectile} {\bf Projectile}
+\begin{DoxyCompactList}\small\item\em Piła \end{DoxyCompactList}\item 
+float {\bf Fire\+Rate}
+\begin{DoxyCompactList}\small\item\em Częstotliwość z którą strzela \end{DoxyCompactList}\item 
+Transform {\bf Projectile\+Fire\+Location}
+\begin{DoxyCompactList}\small\item\em Lokalizacja Piły. \end{DoxyCompactList}\item 
+Game\+Object {\bf Fire\+Projectile\+Effect}
+\begin{DoxyCompactList}\small\item\em Fire projectile effect. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Player\+Hit\+Sound}
+\begin{DoxyCompactList}\small\item\em Dźwięk odtwarzany po trafieniu gracza przez wroga. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Player\+Shoot\+Sound}
+\begin{DoxyCompactList}\small\item\em Dźwięk odtwarzany po wystrzeleniu pocisku przez gracza. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Player\+Health\+Sound}
+\begin{DoxyCompactList}\small\item\em Dźwięk odtwarzany po zebraniu apteczki przez gracza. \end{DoxyCompactList}\item 
+Animator {\bfseries Animator}\label{class_player_a5409bcd7ffe8235f1388fa5a895e041d}
+
+\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf Health}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Wartośc punktów zdrowia. \end{DoxyCompactList}\item 
+bool {\bf Is\+Dead}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Zmienna bool służąca do zapamiętania informacji o śmierci gracza. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-klasa \hyperlink{class_player}{Player} 
+\subsection{Opis szczegółowy}
+klasa \doxyref{Player}{str.}{class_player} 
 
 
 
-\subsection{Member Function Documentation}
-\hypertarget{class_player_a6d893d1229110e7eb17eb7d895198717}{}\index{Player@{Player}!Handle\+Input@{Handle\+Input}}
+\subsection{Dokumentacja funkcji składowych}
+\index{Player@{Player}!Awake@{Awake}}
+\index{Awake@{Awake}!Player@{Player}}
+\subsubsection[{Awake()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Awake (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_aaddfa9f3b558df64f5d1d09e2b906901}
+
+
+Ustawianie początkowych ustawień gracza. 
+
+Jesli gracz jest obrocony, wartosc local\+Scale.\+x bedzie mniejsza od 0.
+
+Punkty zdrowia mają wartość maksymalną. \index{Player@{Player}!Finish\+Level@{Finish\+Level}}
+\index{Finish\+Level@{Finish\+Level}!Player@{Player}}
+\subsubsection[{Finish\+Level()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Finish\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_a91d819ca123465f0c47f17f2179fd391}
+
+
+Metoda uruchamiana po przejściu danego poziomu gry. Deaktywuje ona Box\+Collider2\+D i ruch gracza. 
+
+\index{Player@{Player}!Give\+Health@{Give\+Health}}
+\index{Give\+Health@{Give\+Health}!Player@{Player}}
+\subsubsection[{Give\+Health(int health, Game\+Object instagator)}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Give\+Health (
+\begin{DoxyParamCaption}
+\item[{int}]{health, }
+\item[{Game\+Object}]{instagator}
+\end{DoxyParamCaption}
+)}\label{class_player_ab5b7362150ceb3bdd0ea0264799a1b60}
+
+
+Dodanie punktów zdrowia po zebraniu apteczki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em health} & \\
+\hline
+{\em instagator} & \\
+\hline
+\end{DoxyParams}
+Health += Mathf.\+Min(Health + health, Max\+Health); \index{Player@{Player}!Handle\+Input@{Handle\+Input}}
 \index{Handle\+Input@{Handle\+Input}!Player@{Player}}
 \subsubsection[{Handle\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Handle\+Input (
 \begin{DoxyParamCaption}
@@ -48,14 +129,55 @@ klasa \hyperlink{class_player}{Player}
 
 Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot. Nacisniecie spacji wykonuje skok. 
 
-\hypertarget{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}{}\index{Player@{Player}!Start@{Start}}
-\index{Start@{Start}!Player@{Player}}
-\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Start (
+\index{Player@{Player}!Kill@{Kill}}
+\index{Kill@{Kill}!Player@{Player}}
+\subsubsection[{Kill()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Kill (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_player_a1a09a3ded16ac1646f6bdd4f25fe0ddd}
-Jesli gracz jest obrocony, wartosc local\+Scale.\+x bedzie mniejsza od 0. \hypertarget{class_player_aace80372e18e32fe177e295fe5d93ba8}{}\index{Player@{Player}!Update@{Update}}
+)}\label{class_player_aad95a8298c4f1d4b8ae695c92ef42c92}
+
+
+Zresetowanie ustawień gracza po śmierci. 
+
+Gracz lekko podskakuje pionowo po śmierci. \index{Player@{Player}!Respawn\+At@{Respawn\+At}}
+\index{Respawn\+At@{Respawn\+At}!Player@{Player}}
+\subsubsection[{Respawn\+At(\+Transform spawn\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Respawn\+At (
+\begin{DoxyParamCaption}
+\item[{Transform}]{spawn\+Point}
+\end{DoxyParamCaption}
+)}\label{class_player_a79731bebcf341b5785d28751b737975d}
+
+
+Respawnowanie gracza w danym punkcie i zmiana jego ustawień początkowych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em spawn\+Point} & \\
+\hline
+\end{DoxyParams}
+\index{Player@{Player}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Player@{Player}}
+\subsubsection[{Take\+Damage(int damage, Game\+Object instagator)}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Take\+Damage (
+\begin{DoxyParamCaption}
+\item[{int}]{damage, }
+\item[{Game\+Object}]{instagator}
+\end{DoxyParamCaption}
+)}\label{class_player_ad85aa8e7e4501b49f9d20c4eff6c98a2}
+
+
+Inicjowanie efektu obrażeń gracza (czerwona chmura cząsteczek) oraz zmniejszenie punktów zdrowia gracza po zadanych obrażeniach, prowadzące ewentualnie do jego śmierci. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em damage} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje {\bf I\+Take\+Damage} \doxyref{}{str.}{interface_i_take_damage}.
+
+\index{Player@{Player}!Update@{Update}}
 \index{Update@{Update}!Player@{Player}}
 \subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Player.\+Update (
 \begin{DoxyParamCaption}
@@ -66,24 +188,89 @@ Jesli gracz jest obrocony, wartosc local\+Scale.\+x bedzie mniejsza od 0. \hyper
 
 Wywolywane dla kazdej klatki animacji gry. Wywolanie metody Handle\+Imput(), obslugujacej nacisniecie klawiszy przez gracza. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi. 
 
+Aktualizacja czasu przeładowywania broni.
+
+Ustawienie wartości prędkości jako liczby między 0, a 1. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Player@{Player}!Fire\+Projectile\+Effect@{Fire\+Projectile\+Effect}}
+\index{Fire\+Projectile\+Effect@{Fire\+Projectile\+Effect}!Player@{Player}}
+\subsubsection[{Fire\+Projectile\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Player.\+Fire\+Projectile\+Effect}\label{class_player_a6ec4f072105738364ede9225cc52c535}
 
 
-\subsection{Member Data Documentation}
-\hypertarget{class_player_a00cb3f26349dd5f58ad0a6135b763a07}{}\index{Player@{Player}!Max\+Speed@{Max\+Speed}}
+Fire projectile effect. 
+
+\index{Player@{Player}!Fire\+Rate@{Fire\+Rate}}
+\index{Fire\+Rate@{Fire\+Rate}!Player@{Player}}
+\subsubsection[{Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Fire\+Rate}\label{class_player_a78d79a824776d573853f7047ba972e11}
+
+
+Częstotliwość z którą strzela 
+
+\index{Player@{Player}!Max\+Health@{Max\+Health}}
+\index{Max\+Health@{Max\+Health}!Player@{Player}}
+\subsubsection[{Max\+Health}]{\setlength{\rightskip}{0pt plus 5cm}int Player.\+Max\+Health = 100}\label{class_player_aa31df936a1c5641ed287c77c755eb433}
+
+
+Maksymalna wartość punktów zdrowia. 
+
+\index{Player@{Player}!Max\+Speed@{Max\+Speed}}
 \index{Max\+Speed@{Max\+Speed}!Player@{Player}}
 \subsubsection[{Max\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Max\+Speed = 8}\label{class_player_a00cb3f26349dd5f58ad0a6135b763a07}
 
 
 Maksymalna liczba jednostek na sekunde, jakie gracz moze przejsc. 
 
-\hypertarget{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}{}\index{Player@{Player}!Speed\+Acceleration\+In\+Air@{Speed\+Acceleration\+In\+Air}}
+\index{Player@{Player}!Ouch\+Effect@{Ouch\+Effect}}
+\index{Ouch\+Effect@{Ouch\+Effect}!Player@{Player}}
+\subsubsection[{Ouch\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Player.\+Ouch\+Effect}\label{class_player_ab4991d947bebe270dbf98a6de3007926}
+
+
+Efekt wyzwalany podczas otrzymania obrażeń. 
+
+\index{Player@{Player}!Player\+Health\+Sound@{Player\+Health\+Sound}}
+\index{Player\+Health\+Sound@{Player\+Health\+Sound}!Player@{Player}}
+\subsubsection[{Player\+Health\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Player.\+Player\+Health\+Sound}\label{class_player_a3374795dc2e83ba343d48f2023367c22}
+
+
+Dźwięk odtwarzany po zebraniu apteczki przez gracza. 
+
+\index{Player@{Player}!Player\+Hit\+Sound@{Player\+Hit\+Sound}}
+\index{Player\+Hit\+Sound@{Player\+Hit\+Sound}!Player@{Player}}
+\subsubsection[{Player\+Hit\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Player.\+Player\+Hit\+Sound}\label{class_player_a1274016f3c8907410af60aba1033b258}
+
+
+Dźwięk odtwarzany po trafieniu gracza przez wroga. 
+
+\index{Player@{Player}!Player\+Shoot\+Sound@{Player\+Shoot\+Sound}}
+\index{Player\+Shoot\+Sound@{Player\+Shoot\+Sound}!Player@{Player}}
+\subsubsection[{Player\+Shoot\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Player.\+Player\+Shoot\+Sound}\label{class_player_ab0fa5ed275c214cddd36a228d47695af}
+
+
+Dźwięk odtwarzany po wystrzeleniu pocisku przez gracza. 
+
+\index{Player@{Player}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Player@{Player}}
+\subsubsection[{Projectile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projectile} Player.\+Projectile}\label{class_player_ad8a413d5f8b8e7b585f5e61763de7f89}
+
+
+Piła 
+
+\index{Player@{Player}!Projectile\+Fire\+Location@{Projectile\+Fire\+Location}}
+\index{Projectile\+Fire\+Location@{Projectile\+Fire\+Location}!Player@{Player}}
+\subsubsection[{Projectile\+Fire\+Location}]{\setlength{\rightskip}{0pt plus 5cm}Transform Player.\+Projectile\+Fire\+Location}\label{class_player_aa256ec66d5f9405a331360eccbfa6299}
+
+
+Lokalizacja Piły. 
+
+\index{Player@{Player}!Speed\+Acceleration\+In\+Air@{Speed\+Acceleration\+In\+Air}}
 \index{Speed\+Acceleration\+In\+Air@{Speed\+Acceleration\+In\+Air}!Player@{Player}}
 \subsubsection[{Speed\+Acceleration\+In\+Air}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Speed\+Acceleration\+In\+Air = 5f}\label{class_player_a6a71edc877a84d4f038fcc2b8e4f2843}
 
 
 Jak szybko moze zmienic sie predkosc gracza w powietrzu 
 
-\hypertarget{class_player_ae1d47d3f4f67909f7498d900c1feedfa}{}\index{Player@{Player}!Speed\+Acceleration\+On\+Ground@{Speed\+Acceleration\+On\+Ground}}
+\index{Player@{Player}!Speed\+Acceleration\+On\+Ground@{Speed\+Acceleration\+On\+Ground}}
 \index{Speed\+Acceleration\+On\+Ground@{Speed\+Acceleration\+On\+Ground}!Player@{Player}}
 \subsubsection[{Speed\+Acceleration\+On\+Ground}]{\setlength{\rightskip}{0pt plus 5cm}float Player.\+Speed\+Acceleration\+On\+Ground = 10f}\label{class_player_ae1d47d3f4f67909f7498d900c1feedfa}
 
@@ -92,6 +279,23 @@ Jak szybko moze zmienic sie predkosc gracza na ziemi.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\subsection{Dokumentacja właściwości}
+\index{Player@{Player}!Health@{Health}}
+\index{Health@{Health}!Player@{Player}}
+\subsubsection[{Health}]{\setlength{\rightskip}{0pt plus 5cm}int Player.\+Health\hspace{0.3cm}{\ttfamily [get]}}\label{class_player_a129d77184feb05c2743ef38726dc23da}
+
+
+Wartośc punktów zdrowia. 
+
+\index{Player@{Player}!Is\+Dead@{Is\+Dead}}
+\index{Is\+Dead@{Is\+Dead}!Player@{Player}}
+\subsubsection[{Is\+Dead}]{\setlength{\rightskip}{0pt plus 5cm}bool Player.\+Is\+Dead\hspace{0.3cm}{\ttfamily [get]}}\label{class_player_a7d0c0007bf91eb3eb887b7ab08f49cd3}
+
+
+Zmienna bool służąca do zapamiętania informacji o śmierci gracza. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
 \item 
 C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Player.\+cs\end{DoxyCompactItemize}

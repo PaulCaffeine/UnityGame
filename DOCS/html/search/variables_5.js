@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['margin',['Margin',['../class_camera_controller.html#a8c93ba738eeff2eb5af4bc2bc4ec3f10',1,'CameraController']]],
-  ['maxdistancetogoal',['MaxDistanceToGoal',['../class_follow_path.html#a7fd1ef16a8e77196e526d285197ed847',1,'FollowPath']]],
-  ['maxspeed',['MaxSpeed',['../class_player.html#a00cb3f26349dd5f58ad0a6135b763a07',1,'Player']]],
-  ['maxvelocity',['MaxVelocity',['../class_controller_parameters2_d.html#a06ebe9f5ed4fb8a39c1ed11f36659b2b',1,'ControllerParameters2D']]]
+  ['fireprojectileeffect',['FireProjectileEffect',['../class_player.html#a6ec4f072105738364ede9225cc52c535',1,'Player']]],
+  ['firerate',['FireRate',['../class_pathed_projectile_spawner.html#a77143c5d27e069a0338a150eca991f27',1,'PathedProjectileSpawner.FireRate()'],['../class_player.html#a78d79a824776d573853f7047ba972e11',1,'Player.FireRate()'],['../class_simple_enemy_ai.html#a1798faa2837dca4a9ab935bebac1a295',1,'SimpleEnemyAi.FireRate()']]]
 ];

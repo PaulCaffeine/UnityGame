@@ -1,0 +1,63 @@
+.TH "GiveDamageToPlayer" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GiveDamageToPlayer \- Klasa odpowiedzialna za zadawanie obrażeń graczowi przez dany obiekt\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBLateUpdate\fP ()"
+.br
+.RI "\fIAktualizacja położenia obiektu\&. \fP"
+.ti -1c
+.RI "void \fBOnTriggerEnter2D\fP (Collider2D other)"
+.br
+.RI "\fIOdebranie punktów zdrowia gracza po zderzeniu z Colliderem2D obiektu, oraz ustawienie lekkiego 'odrzutu' gracza w tył po otrzymaniu obrażeń\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "int \fBDamageToGive\fP = 10"
+.br
+.RI "\fIDomyślna wartośc obrażeń zadawana graczowi\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiedzialna za zadawanie obrażeń graczowi przez dany obiekt\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void GiveDamageToPlayer\&.LateUpdate ()"
+
+.PP
+Aktualizacja położenia obiektu\&. 
+.SS "void GiveDamageToPlayer\&.OnTriggerEnter2D (Collider2D other)"
+
+.PP
+Odebranie punktów zdrowia gracza po zderzeniu z Colliderem2D obiektu, oraz ustawienie lekkiego 'odrzutu' gracza w tył po otrzymaniu obrażeń\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "int GiveDamageToPlayer\&.DamageToGive = 10"
+
+.PP
+Domyślna wartośc obrażeń zadawana graczowi\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

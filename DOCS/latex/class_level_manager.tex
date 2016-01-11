@@ -1,0 +1,197 @@
+\section{Dokumentacja klasy Level\+Manager}
+\label{class_level_manager}\index{Level\+Manager@{Level\+Manager}}
+Diagram dziedziczenia dla Level\+Manager\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level_manager}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Awake} ()
+\begin{DoxyCompactList}\small\item\em Ustawienie instancji klasy, do której można się później odwoływać w innych klasach. \end{DoxyCompactList}\item 
+void {\bf Start} ()
+\item 
+void {\bf Update} ()
+\begin{DoxyCompactList}\small\item\em Aktualizowanie pozycji gracza względem checkpointów, liczby punktów i upływu czasu od osiągnięcia ostatniego checkpointu. \end{DoxyCompactList}\item 
+void {\bf Goto\+Next\+Level} (string level\+Name)
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiająca procedurę przejścia do następnego poziomu. \end{DoxyCompactList}\item 
+void {\bf Kill\+Player} ()
+\begin{DoxyCompactList}\small\item\em Uruchomienie procedury zabicia gracza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Checkpoint} {\bf Debug\+Spawn}
+\begin{DoxyCompactList}\small\item\em \doxyref{Checkpoint}{str.}{class_checkpoint} związany z spawnowaniem gracza w edytorze Unity (jeśli go ustawimy w Unity). \end{DoxyCompactList}\item 
+int {\bf Bonus\+Cutoff\+Seconds}
+\begin{DoxyCompactList}\small\item\em Czas na osiągnięcie nowego checkpointu. \end{DoxyCompactList}\item 
+int {\bf Bonus\+Second\+Multiplier}
+\begin{DoxyCompactList}\small\item\em Mnożnik dotyczący zdobotych punktów za dotarcie do checkpointu w wyznaczonym czasie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Level\+Manager} {\bf Instance}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Instancja Level\+Managera. \end{DoxyCompactList}\item 
+{\bf Player} {\bf Player}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Gracz. \end{DoxyCompactList}\item 
+{\bf Camera\+Controller} {\bf Camera}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Kamera. \end{DoxyCompactList}\item 
+Time\+Span {\bf Running\+Time}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Upływ czasu od ostatniej wartości \+\_\+started. \end{DoxyCompactList}\item 
+int {\bf Current\+Time\+Bonus}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Obliczenie bonusu czasowego za osiągnięcie nowego checkpointu w wyznaczonym czasie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Level\+Manager@{Level\+Manager}!Awake@{Awake}}
+\index{Awake@{Awake}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Awake()}]{\setlength{\rightskip}{0pt plus 5cm}void Level\+Manager.\+Awake (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_level_manager_a34758a17d38f61b86163674657c94256}
+
+
+Ustawienie instancji klasy, do której można się później odwoływać w innych klasach. 
+
+\index{Level\+Manager@{Level\+Manager}!Goto\+Next\+Level@{Goto\+Next\+Level}}
+\index{Goto\+Next\+Level@{Goto\+Next\+Level}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Goto\+Next\+Level(string level\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Level\+Manager.\+Goto\+Next\+Level (
+\begin{DoxyParamCaption}
+\item[{string}]{level\+Name}
+\end{DoxyParamCaption}
+)}\label{class_level_manager_aff2b84fbe01a7639e716fa8eceae27b6}
+
+
+Metoda uruchamiająca procedurę przejścia do następnego poziomu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em level\+Name} & \\
+\hline
+\end{DoxyParams}
+\index{Level\+Manager@{Level\+Manager}!Kill\+Player@{Kill\+Player}}
+\index{Kill\+Player@{Kill\+Player}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Kill\+Player()}]{\setlength{\rightskip}{0pt plus 5cm}void Level\+Manager.\+Kill\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_level_manager_a8c82ee034d89e0f1b7cb732052393e5d}
+
+
+Uruchomienie procedury zabicia gracza. 
+
+\index{Level\+Manager@{Level\+Manager}!Start@{Start}}
+\index{Start@{Start}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Level\+Manager.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_level_manager_afcd5c1d3d30954925d73f22ec1d0ecce}
+
+
+
+
+Posortowana lista checkpointów.
+
+Jeśli nie ma checkpointów, ustaw flagę na -\/1, w przeciwnym wypadku ustaw indeks na 0.
+
+Gracz i kamera są teraz w lokalnej pamięci podręcznej (cache) Level\+Managera.
+
+Ustawienie wartości początkowej \+\_\+started na aktualny czas.
+
+Przypisanie obiektów (gwiazdek) do poszczególnych checkpointów (patrząc wstecz od danego checkpointu).
+
+Wykonywane tylko w edytorze Unity, ustawia domyślny punkt spawnu gracza jako Debug\+Spawn, jeśli ustawiony jest Debug\+Spawn (nie ma wartości null). \index{Level\+Manager@{Level\+Manager}!Update@{Update}}
+\index{Update@{Update}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Level\+Manager.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_level_manager_a874b53f003bb10ede09e45fc34da4db9}
+
+
+Aktualizowanie pozycji gracza względem checkpointów, liczby punktów i upływu czasu od osiągnięcia ostatniego checkpointu. 
+
+Sprawdzamy czy jesteśmy na ostatnim checkpoincie (jeśli tak, to nie ma sensu wykonywać dalszych operacji -\/ nie ma dalszych checkpointów).
+
+Sprawdzamy czy osiągnęliśmy nowy checkpoint, jeśli nie, wracamy.
+
+Kod wykonywany, gdy osiągnięto nowy checkpoint. Opuszczenie starego checkpointu.
+
+Inkrementacja wartości indeksu obecnego checkpointu.
+
+Wejście w nowy checkpoint.
+
+Dodanie ewentualnego bonusu czasowego.
+
+Zapisanie liczby punktów.
+
+Zresetowanie czasu w \+\_\+started. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Level\+Manager@{Level\+Manager}!Bonus\+Cutoff\+Seconds@{Bonus\+Cutoff\+Seconds}}
+\index{Bonus\+Cutoff\+Seconds@{Bonus\+Cutoff\+Seconds}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Bonus\+Cutoff\+Seconds}]{\setlength{\rightskip}{0pt plus 5cm}int Level\+Manager.\+Bonus\+Cutoff\+Seconds}\label{class_level_manager_afa0d0d57f95ac84102937f8ed1b1f207}
+
+
+Czas na osiągnięcie nowego checkpointu. 
+
+\index{Level\+Manager@{Level\+Manager}!Bonus\+Second\+Multiplier@{Bonus\+Second\+Multiplier}}
+\index{Bonus\+Second\+Multiplier@{Bonus\+Second\+Multiplier}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Bonus\+Second\+Multiplier}]{\setlength{\rightskip}{0pt plus 5cm}int Level\+Manager.\+Bonus\+Second\+Multiplier}\label{class_level_manager_ab5817002a701639af6c54c4f1096e15c}
+
+
+Mnożnik dotyczący zdobotych punktów za dotarcie do checkpointu w wyznaczonym czasie. 
+
+\index{Level\+Manager@{Level\+Manager}!Debug\+Spawn@{Debug\+Spawn}}
+\index{Debug\+Spawn@{Debug\+Spawn}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Debug\+Spawn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Checkpoint} Level\+Manager.\+Debug\+Spawn}\label{class_level_manager_aad8098a740db596e926b6769e7946ce5}
+
+
+\doxyref{Checkpoint}{str.}{class_checkpoint} związany z spawnowaniem gracza w edytorze Unity (jeśli go ustawimy w Unity). 
+
+
+
+\subsection{Dokumentacja właściwości}
+\index{Level\+Manager@{Level\+Manager}!Camera@{Camera}}
+\index{Camera@{Camera}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera\+Controller} Level\+Manager.\+Camera\hspace{0.3cm}{\ttfamily [get]}}\label{class_level_manager_a9eae24c0943ba6c66ad82d0809cfae03}
+
+
+Kamera. 
+
+\index{Level\+Manager@{Level\+Manager}!Current\+Time\+Bonus@{Current\+Time\+Bonus}}
+\index{Current\+Time\+Bonus@{Current\+Time\+Bonus}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Current\+Time\+Bonus}]{\setlength{\rightskip}{0pt plus 5cm}int Level\+Manager.\+Current\+Time\+Bonus\hspace{0.3cm}{\ttfamily [get]}}\label{class_level_manager_a5a916054e78f75f8aa1313d676d19c94}
+
+
+Obliczenie bonusu czasowego za osiągnięcie nowego checkpointu w wyznaczonym czasie. 
+
+\index{Level\+Manager@{Level\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Level\+Manager} Level\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}\label{class_level_manager_a4e58c52b52fc7486c8f6ede86867be7b}
+
+
+Instancja Level\+Managera. 
+
+\index{Level\+Manager@{Level\+Manager}!Player@{Player}}
+\index{Player@{Player}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} Level\+Manager.\+Player\hspace{0.3cm}{\ttfamily [get]}}\label{class_level_manager_a6a35055ac074557e9e209daea815fdc1}
+
+
+Gracz. 
+
+\index{Level\+Manager@{Level\+Manager}!Running\+Time@{Running\+Time}}
+\index{Running\+Time@{Running\+Time}!Level\+Manager@{Level\+Manager}}
+\subsubsection[{Running\+Time}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Span Level\+Manager.\+Running\+Time\hspace{0.3cm}{\ttfamily [get]}}\label{class_level_manager_a71e1e09286757567577501bf1d5624ad}
+
+
+Upływ czasu od ostatniej wartości \+\_\+started. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Level\+Manager.\+cs\end{DoxyCompactItemize}

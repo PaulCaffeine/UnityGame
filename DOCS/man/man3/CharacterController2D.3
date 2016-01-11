@@ -1,0 +1,182 @@
+.TH "CharacterController2D" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CharacterController2D \- klasa \fBCharacterController2D\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "\fIInicjalizacja i ustawienie poczatkowych wartosci parametrow\&. \fP"
+.ti -1c
+.RI "void \fBAddForce\fP (Vector2 force)"
+.br
+.RI "\fIDodanie dodatkowej predkosci\&. \fP"
+.ti -1c
+.RI "void \fBSetForce\fP (Vector2 force)"
+.br
+.RI "\fIUstawienie predkosci\&. \fP"
+.ti -1c
+.RI "void \fBSetHorizontalForce\fP (float x)"
+.br
+.RI "\fIUstawienie predkosci w poziomie\&. \fP"
+.ti -1c
+.RI "void \fBSetVerticalForce\fP (float y)"
+.br
+.RI "\fIUstawienie predkosci w pionie\&. \fP"
+.ti -1c
+.RI "void \fBJump\fP ()"
+.br
+.RI "\fIWykonanie skoku\&. \fP"
+.ti -1c
+.RI "void \fBLateUpdate\fP ()"
+.br
+.RI "\fIWykonywane po wywolaniu aktualizacji obiektow\&. Uwzglednienie wplywu czasu na czestotliwosc skokow i ruch, wplyw grawitacji na ruch w pionie\&. \fP"
+.ti -1c
+.RI "void \fBOnTriggerEnter2D\fP (Collider2D other)"
+.br
+.RI "\fIWykrycie ze gracz znalazl sie w innym srodowisku (np\&. wodzie)\&. \fP"
+.ti -1c
+.RI "void \fBOnTriggerExit2D\fP (Collider2D other)"
+.br
+.RI "\fIWyjscie ze srodowiska o zmienionych parametrach\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "LayerMask \fBPlatformMask\fP"
+.br
+.RI "\fILayer mask uzywany do wykrywania kolizji\&. Obiekty na tej warstwie uczestnicza w kolizji\&. \fP"
+.ti -1c
+.RI "\fBControllerParameters2D\fP \fBDefaultParameters\fP"
+.br
+.RI "\fIDomyslne parametry kontrolera\&. \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "\fBControllerState2D\fP \fBState\fP\fC [get]\fP"
+.br
+.RI "\fIStan gracza, informujacy o kolizjach w jakich bierze udzial\&. \fP"
+.ti -1c
+.RI "Vector2 \fBVelocity\fP\fC [get]\fP"
+.br
+.RI "\fIPredkosc gracza\&. \fP"
+.ti -1c
+.RI "bool \fBHandleCollisions\fP\fC [get, set]\fP"
+.br
+.RI "\fIZmienna typu bool, mowiaca czy nalezy obsluzyc kolizje\&. \fP"
+.ti -1c
+.RI "\fBControllerParameters2D\fP \fBParameters\fP\fC [get]\fP"
+.br
+.RI "\fIZwraca nadpisane lub w przypadku braku nadpisania, domyslne parametry kontrolera\&. \fP"
+.ti -1c
+.RI "GameObject \fBStandingOn\fP\fC [get]\fP"
+.br
+.RI "\fIStandingOn \fP"
+.ti -1c
+.RI "Vector3 \fBPlatformVelocity\fP\fC [get]\fP"
+.br
+.RI "\fIPredkosc platformy, na ktorej stoi gracz\&. \fP"
+.ti -1c
+.RI "bool \fBCanJump\fP\fC [get]\fP"
+.br
+.RI "\fISprawdza czy mozna wykonac skok zaleznie od ustawionej wartosci JumpBehavior\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBCharacterController2D\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void CharacterController2D\&.AddForce (Vector2 force)"
+
+.PP
+Dodanie dodatkowej predkosci\&. 
+.SS "void CharacterController2D\&.Awake ()"
+
+.PP
+Inicjalizacja i ustawienie poczatkowych wartosci parametrow\&. Obliczenie rozmiarow boxu, ktory moze uczestniczyc w kolizjach z innymi brylami sztywnymi\&. Od wartosci odejmowane sa skiny, z ktorych wychodza promienie wykrywajace kolizje (skin to waska ramka wokol obiektu, istniejaca po wewnetrznej stronie obiektu, sluzaca do wykrywania kolizji)\&. Nastepnie obliczane sa odstepy pomiedzy promieniami wykrywajacymi kolizje\&. 
+.SS "void CharacterController2D\&.Jump ()"
+
+.PP
+Wykonanie skoku\&. 
+.SS "void CharacterController2D\&.LateUpdate ()"
+
+.PP
+Wykonywane po wywolaniu aktualizacji obiektow\&. Uwzglednienie wplywu czasu na czestotliwosc skokow i ruch, wplyw grawitacji na ruch w pionie\&. 
+.SS "void CharacterController2D\&.OnTriggerEnter2D (Collider2D other)"
+
+.PP
+Wykrycie ze gracz znalazl sie w innym srodowisku (np\&. wodzie)\&. Nadpisanie parametrow kontrolera\&. 
+.SS "void CharacterController2D\&.OnTriggerExit2D (Collider2D other)"
+
+.PP
+Wyjscie ze srodowiska o zmienionych parametrach\&. Parametry nie sa juz nadpisywane poprzednimi wartosciami\&. 
+.SS "void CharacterController2D\&.SetForce (Vector2 force)"
+
+.PP
+Ustawienie predkosci\&. 
+.SS "void CharacterController2D\&.SetHorizontalForce (float x)"
+
+.PP
+Ustawienie predkosci w poziomie\&. 
+.SS "void CharacterController2D\&.SetVerticalForce (float y)"
+
+.PP
+Ustawienie predkosci w pionie\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "\fBControllerParameters2D\fP CharacterController2D\&.DefaultParameters"
+
+.PP
+Domyslne parametry kontrolera\&. 
+.SS "LayerMask CharacterController2D\&.PlatformMask"
+
+.PP
+Layer mask uzywany do wykrywania kolizji\&. Obiekty na tej warstwie uczestnicza w kolizji\&. 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "bool CharacterController2D\&.CanJump\fC [get]\fP"
+
+.PP
+Sprawdza czy mozna wykonac skok zaleznie od ustawionej wartosci JumpBehavior\&. 
+.SS "bool CharacterController2D\&.HandleCollisions\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Zmienna typu bool, mowiaca czy nalezy obsluzyc kolizje\&. 
+.SS "\fBControllerParameters2D\fP CharacterController2D\&.Parameters\fC [get]\fP"
+
+.PP
+Zwraca nadpisane lub w przypadku braku nadpisania, domyslne parametry kontrolera\&. 
+.SS "Vector3 CharacterController2D\&.PlatformVelocity\fC [get]\fP"
+
+.PP
+Predkosc platformy, na ktorej stoi gracz\&. 
+.SS "GameObject CharacterController2D\&.StandingOn\fC [get]\fP"
+
+.PP
+StandingOn 
+.SS "\fBControllerState2D\fP CharacterController2D\&.State\fC [get]\fP"
+
+.PP
+Stan gracza, informujacy o kolizjach w jakich bierze udzial\&. 
+.SS "Vector2 CharacterController2D\&.Velocity\fC [get]\fP"
+
+.PP
+Predkosc gracza\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

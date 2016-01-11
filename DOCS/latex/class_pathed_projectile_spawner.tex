@@ -1,0 +1,131 @@
+\section{Dokumentacja klasy Pathed\+Projectile\+Spawner}
+\label{class_pathed_projectile_spawner}\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+
+
+Tworzenie pocisku poruszającego się po danej ścieżce.  
+
+
+Diagram dziedziczenia dla Pathed\+Projectile\+Spawner\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pathed_projectile_spawner}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Start} ()
+\begin{DoxyCompactList}\small\item\em Ustawienie początkowej wartości czasu kolejnego wystrzału na częstotliwość oddawania strzałów. \end{DoxyCompactList}\item 
+void {\bf Update} ()
+\begin{DoxyCompactList}\small\item\em Metoda odmierzająca czas do kolejnego wystrzału, inicjująca obiekt pocisku w danym położeniu, o danej prędkości i wyznaczonym celu. Odpowiada również za inicjowanie efektu stworzenia pocisku w świecie gry oraz odtworzenie dźwięku. \end{DoxyCompactList}\item 
+void {\bf On\+Draw\+Gizmos} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie czerwonej linii w widoku Scene podczas wystrzału, od jego źródła do celu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Transform {\bf Destination}
+\begin{DoxyCompactList}\small\item\em Cel. \end{DoxyCompactList}\item 
+{\bf Pathed\+Projectile} {\bf Projectile}
+\begin{DoxyCompactList}\small\item\em Obiekt pocisku. \end{DoxyCompactList}\item 
+Game\+Object {\bfseries Spawn\+Effect}\label{class_pathed_projectile_spawner_a05f0c6114aeb62a7f208757f3bb669b0}
+
+\item 
+float {\bf Speed}
+\begin{DoxyCompactList}\small\item\em Prędkość pocisku. \end{DoxyCompactList}\item 
+float {\bf Fire\+Rate}
+\begin{DoxyCompactList}\small\item\em Częstotliwość oddawania strzałów. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Spawn\+Projectile\+Sound}
+\begin{DoxyCompactList}\small\item\em Dźwięk odtwarzany podczas wystrzału pocisku. \end{DoxyCompactList}\item 
+Animator {\bf Animator}
+\begin{DoxyCompactList}\small\item\em Obiekt animacji potrzebny do ustawienia efektu przejścia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Tworzenie pocisku poruszającego się po danej ścieżce. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!On\+Draw\+Gizmos@{On\+Draw\+Gizmos}}
+\index{On\+Draw\+Gizmos@{On\+Draw\+Gizmos}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{On\+Draw\+Gizmos()}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile\+Spawner.\+On\+Draw\+Gizmos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_spawner_a88ebe3827d4ec865088ed3b33b04da2a}
+
+
+Tworzenie czerwonej linii w widoku Scene podczas wystrzału, od jego źródła do celu. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Start@{Start}}
+\index{Start@{Start}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile\+Spawner.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_spawner_abc587266a7eed7f8acfab4f941ba1a9b}
+
+
+Ustawienie początkowej wartości czasu kolejnego wystrzału na częstotliwość oddawania strzałów. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Update@{Update}}
+\index{Update@{Update}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Pathed\+Projectile\+Spawner.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathed_projectile_spawner_abc7aedd014236174fc8fd43359e352de}
+
+
+Metoda odmierzająca czas do kolejnego wystrzału, inicjująca obiekt pocisku w danym położeniu, o danej prędkości i wyznaczonym celu. Odpowiada również za inicjowanie efektu stworzenia pocisku w świecie gry oraz odtworzenie dźwięku. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Animator@{Animator}}
+\index{Animator@{Animator}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Animator}]{\setlength{\rightskip}{0pt plus 5cm}Animator Pathed\+Projectile\+Spawner.\+Animator}\label{class_pathed_projectile_spawner_a3edee672c39ada316ed3ec99686a8b42}
+
+
+Obiekt animacji potrzebny do ustawienia efektu przejścia. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Destination@{Destination}}
+\index{Destination@{Destination}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Destination}]{\setlength{\rightskip}{0pt plus 5cm}Transform Pathed\+Projectile\+Spawner.\+Destination}\label{class_pathed_projectile_spawner_a641d2522461c18b7e38ca57c0725755b}
+
+
+Cel. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Fire\+Rate@{Fire\+Rate}}
+\index{Fire\+Rate@{Fire\+Rate}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}float Pathed\+Projectile\+Spawner.\+Fire\+Rate}\label{class_pathed_projectile_spawner_a77143c5d27e069a0338a150eca991f27}
+
+
+Częstotliwość oddawania strzałów. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Projectile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pathed\+Projectile} Pathed\+Projectile\+Spawner.\+Projectile}\label{class_pathed_projectile_spawner_a8b72edf1a8fd037b4ef989c3a061be51}
+
+
+Obiekt pocisku. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Spawn\+Projectile\+Sound@{Spawn\+Projectile\+Sound}}
+\index{Spawn\+Projectile\+Sound@{Spawn\+Projectile\+Sound}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Spawn\+Projectile\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Pathed\+Projectile\+Spawner.\+Spawn\+Projectile\+Sound}\label{class_pathed_projectile_spawner_ab653acbecff474b6e0f58db623b1acea}
+
+
+Dźwięk odtwarzany podczas wystrzału pocisku. 
+
+\index{Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}!Speed@{Speed}}
+\index{Speed@{Speed}!Pathed\+Projectile\+Spawner@{Pathed\+Projectile\+Spawner}}
+\subsubsection[{Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Pathed\+Projectile\+Spawner.\+Speed}\label{class_pathed_projectile_spawner_a03c624ef3218b0cc67b1a6c68479339d}
+
+
+Prędkość pocisku. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Pathed\+Projectile\+Spawner.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+.TH "BackgroundParallax" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BackgroundParallax \- klasa \fBBackgroundParallax\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.RI "\fIZapamiętanie położenia kamery w ostatniej klatce gry, potrzebnego w późniejszym etape do określenia, o ile tło musi się poruszyć w lewo lub prawo\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIRuch wykonany od ostaniej klatki do obecnej, przeskalowany przez czynnik efektu parallax (intensywności ruchu tła)\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "Transform[] \fBBackgrounds\fP"
+.br
+.RI "\fITablica rzędów elementów tła\&. \fP"
+.ti -1c
+.RI "float \fBParallaxScale\fP"
+.br
+.RI "\fIWartość efektu poruszania się tła\&. \fP"
+.ti -1c
+.RI "float \fBParallaxReductionFactor\fP"
+.br
+.RI "\fIWartość redukująca stopień poruszania się, dla warstw (rzędów elementów) dalej położonych\&. \fP"
+.ti -1c
+.RI "float \fBSmoothing\fP"
+.br
+.RI "\fIZapewnienie płynności ruchu\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBBackgroundParallax\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void BackgroundParallax\&.start ()"
+
+.PP
+Zapamiętanie położenia kamery w ostatniej klatce gry, potrzebnego w późniejszym etape do określenia, o ile tło musi się poruszyć w lewo lub prawo\&. 
+.SS "void BackgroundParallax\&.Update ()"
+
+.PP
+Ruch wykonany od ostaniej klatki do obecnej, przeskalowany przez czynnik efektu parallax (intensywności ruchu tła)\&. Dla każdej warstwy (rzędu elementów) tła\&.
+.PP
+Zapamiętanie pozycji warstwy tła uaktualnionej o efekt parallax,
+.PP
+oraz postepującą redukcję tego efektu dla coraz dalszych warstw\&.
+.PP
+Ustawienie aktualnej pozycji warstw tła\&.
+.PP
+Obecna pozycja tła\&.
+.PP
+Nowa pozycja tła\&.
+.PP
+Określony efekt płynności animacji efektu w grze\&.
+.PP
+Uaktualnienie ruchu kamery\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "Transform [] BackgroundParallax\&.Backgrounds"
+
+.PP
+Tablica rzędów elementów tła\&. 
+.SS "float BackgroundParallax\&.ParallaxReductionFactor"
+
+.PP
+Wartość redukująca stopień poruszania się, dla warstw (rzędów elementów) dalej położonych\&. 
+.SS "float BackgroundParallax\&.ParallaxScale"
+
+.PP
+Wartość efektu poruszania się tła\&. 
+.SS "float BackgroundParallax\&.Smoothing"
+
+.PP
+Zapewnienie płynności ruchu\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

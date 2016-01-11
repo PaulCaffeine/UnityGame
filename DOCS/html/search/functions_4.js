@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jump',['Jump',['../class_character_controller2_d.html#aa42cc475784c2a2f5ca406669504824e',1,'CharacterController2D']]]
+  ['handleinput',['HandleInput',['../class_player.html#a6d893d1229110e7eb17eb7d895198717',1,'Player']]]
 ];

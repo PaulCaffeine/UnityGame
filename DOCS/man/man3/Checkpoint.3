@@ -1,0 +1,80 @@
+.TH "Checkpoint" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Checkpoint \- Klasa odpowiedzialna za respawn gracza w danym checkpoincie\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "\fITworzenie listy listenerów obsługujących respawn obiektów wraz z graczem w kolejnych checkpointach\&. \fP"
+.ti -1c
+.RI "void \fBPlayerHitCheckpoint\fP ()"
+.br
+.RI "\fIUruchomienie metody PlayerHitCheckpointCo, z aktualną wartością bonusu czasowego jako argumentem\&. \fP"
+.ti -1c
+.RI "void \fBPlayerLeftCheckpoint\fP ()"
+.br
+.RI "\fIMetoda wywoływana w razie opuszczenia checkpointu (nic nie robi)\&. \fP"
+.ti -1c
+.RI "void \fBSpawnPlayer\fP (\fBPlayer\fP player)"
+.br
+.RI "\fIRespawnowanie gracza w miejscu, w którym znajduje się checkpoint\&. \fP"
+.ti -1c
+.RI "void \fBAssignObjectToCheckpoint\fP (\fBIPlayerRespawnListener\fP listener)"
+.br
+.RI "\fIPrzydzielanie obiektów do checkpointów, które mają się zrespawnować po respawnie gracza\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiedzialna za respawn gracza w danym checkpoincie\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void Checkpoint\&.AssignObjectToCheckpoint (\fBIPlayerRespawnListener\fP listener)"
+
+.PP
+Przydzielanie obiektów do checkpointów, które mają się zrespawnować po respawnie gracza\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIlistener\fP 
+.RE
+.PP
+
+.SS "void Checkpoint\&.Awake ()"
+
+.PP
+Tworzenie listy listenerów obsługujących respawn obiektów wraz z graczem w kolejnych checkpointach\&. 
+.SS "void Checkpoint\&.PlayerHitCheckpoint ()"
+
+.PP
+Uruchomienie metody PlayerHitCheckpointCo, z aktualną wartością bonusu czasowego jako argumentem\&. 
+.SS "void Checkpoint\&.PlayerLeftCheckpoint ()"
+
+.PP
+Metoda wywoływana w razie opuszczenia checkpointu (nic nie robi)\&. 
+.SS "void Checkpoint\&.SpawnPlayer (\fBPlayer\fP player)"
+
+.PP
+Respawnowanie gracza w miejscu, w którym znajduje się checkpoint\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIplayer\fP 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

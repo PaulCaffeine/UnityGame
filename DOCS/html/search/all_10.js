@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['update',['Update',['../class_background_parallax.html#a77b333e27f605355ee6b98eb58641ab5',1,'BackgroundParallax.Update()'],['../class_camera_controller.html#a7c4f486f4bcbd1d54a346fdce9707bd5',1,'CameraController.Update()'],['../class_follow_path.html#a157ad1da8560085de3542e46050d7183',1,'FollowPath.Update()'],['../class_player.html#aace80372e18e32fe177e295fe5d93ba8',1,'Player.Update()']]]
+  ['setforce',['SetForce',['../class_character_controller2_d.html#a5ed35a778ec714e5783d6f0570bca703',1,'CharacterController2D']]],
+  ['sethorizontalforce',['SetHorizontalForce',['../class_character_controller2_d.html#a8fd797b25fef289cbc1993f94dfb9b48',1,'CharacterController2D']]],
+  ['setverticalforce',['SetVerticalForce',['../class_character_controller2_d.html#a29d14b0bb79f8661d9655ab9bed074e2',1,'CharacterController2D']]],
+  ['shootsound',['ShootSound',['../class_simple_enemy_ai.html#a924901f31131a3b8fb3fff3e39ccb927',1,'SimpleEnemyAi']]],
+  ['show',['Show',['../class_floating_text.html#aec904126f9b38b503a21b498347b3705',1,'FloatingText']]],
+  ['simpleenemyai',['SimpleEnemyAi',['../class_simple_enemy_ai.html',1,'']]],
+  ['simpleprojectile',['SimpleProjectile',['../class_simple_projectile.html',1,'']]],
+  ['slopeangle',['SlopeAngle',['../class_controller_state2_d.html#a724ea7c59fdf1d3c6f1e8fa80998651a',1,'ControllerState2D']]],
+  ['slopelimit',['SlopeLimit',['../class_controller_parameters2_d.html#ae706235bff2d67da0d71293bef2ea8d1',1,'ControllerParameters2D']]],
+  ['smoothing',['Smoothing',['../class_background_parallax.html#ad9e09d728695d0c26f103ee614b67000',1,'BackgroundParallax.Smoothing()'],['../class_camera_controller.html#aaa266990dfb97f6e19d4dd6489f683ef',1,'CameraController.Smoothing()']]],
+  ['sortparticlesystem',['SortParticleSystem',['../class_sort_particle_system.html',1,'']]],
+  ['spawnplayer',['SpawnPlayer',['../class_checkpoint.html#a3b56b2963f8df54bee9e5647428bfcd5',1,'Checkpoint']]],
+  ['spawnprojectilesound',['SpawnProjectileSound',['../class_pathed_projectile_spawner.html#ab653acbecff474b6e0f58db623b1acea',1,'PathedProjectileSpawner']]],
+  ['speed',['Speed',['../class_follow_path.html#a366b7ad38c7db477e1217ae5c364ac2b',1,'FollowPath.Speed()'],['../class_pathed_projectile_spawner.html#a03c624ef3218b0cc67b1a6c68479339d',1,'PathedProjectileSpawner.Speed()'],['../class_projectile.html#a635b74f687fe3e37f8602bb18d13f90f',1,'Projectile.Speed()'],['../class_simple_enemy_ai.html#a78b91ea3da1dc65b7f93eadc8ef1d8e6',1,'SimpleEnemyAi.Speed()']]],
+  ['speedaccelerationinair',['SpeedAccelerationInAir',['../class_player.html#a6a71edc877a84d4f038fcc2b8e4f2843',1,'Player']]],
+  ['speedaccelerationonground',['SpeedAccelerationOnGround',['../class_player.html#ae1d47d3f4f67909f7498d900c1feedfa',1,'Player']]],
+  ['standingon',['StandingOn',['../class_character_controller2_d.html#ae2f301ab8f2d3b4290a2780d021e44fb',1,'CharacterController2D']]],
+  ['start',['start',['../class_background_parallax.html#abb5fc2464be1a1bba55238be509a2082',1,'BackgroundParallax.start()'],['../class_auto_destroy_particle_system.html#a74462c1cf75609ccd2d2663f996d2095',1,'AutoDestroyParticleSystem.Start()'],['../class_camera_controller.html#ad4a238c6f7db3ee003302a245d860860',1,'CameraController.Start()'],['../class_follow_path.html#a5e1828cf1cf7744c062a58e4a0d29605',1,'FollowPath.Start()'],['../class_level_manager.html#afcd5c1d3d30954925d73f22ec1d0ecce',1,'LevelManager.Start()'],['../class_pathed_projectile_spawner.html#abc587266a7eed7f8acfab4f941ba1a9b',1,'PathedProjectileSpawner.Start()'],['../class_player_bounds.html#aff199ace2c6b71598662d119ba267d20',1,'PlayerBounds.Start()'],['../class_simple_enemy_ai.html#a64a4274eed9b9b586c7ec70d0066a727',1,'SimpleEnemyAi.Start()'],['../class_sort_particle_system.html#a671745a1f19ee8e655d8cd4ed2ccd06e',1,'SortParticleSystem.Start()']]],
+  ['startscreen',['StartScreen',['../class_start_screen.html',1,'']]],
+  ['state',['State',['../class_character_controller2_d.html#a5e65ffc5d4f73920480727f2bf58e978',1,'CharacterController2D']]],
+  ['style',['Style',['../class_floating_text.html#a4d9e7743444033595122aa17fad56e97',1,'FloatingText']]]
 ];

@@ -1,0 +1,106 @@
+.TH "PathedProjectile" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PathedProjectile \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour i \fBITakeDamage\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitialize\fP (Transform destination, float speed)"
+.br
+.RI "\fIInicjalizacja celu i prêdkoœci obiektu pocisku\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIAktualizacja po³o¿enia pocisku w czasie, oraz obs³uga jego zniszczenia\&. \fP"
+.ti -1c
+.RI "void \fBTakeDamage\fP (int damage, GameObject instigator)"
+.br
+.RI "\fIMetoda wywo³ywana po zestrzeleniu pocisku przez gracza\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "GameObject \fBDestroyEffect\fP"
+.br
+.RI "\fIEfekt towarzysz¹cy zniszczeniu pocisku\&. \fP"
+.ti -1c
+.RI "int \fBPointsToGivePlayer\fP"
+.br
+.RI "\fIPunkty przyznawane graczowi za zestrzelenie pocisku\&. \fP"
+.ti -1c
+.RI "AudioClip \fBDestroySound\fP"
+.br
+.RI "\fIDŸwiêk odtwarzany przy zniszczeniu pocisku\&. \fP"
+.in -1c
+.SH "Dokumentacja funkcji skÅ‚adowych"
+.PP 
+.SS "void PathedProjectile\&.Initialize (Transform destination, float speed)"
+
+.PP
+Inicjalizacja celu i prêdkoœci obiektu pocisku\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdestination\fP 
+.br
+\fIspeed\fP 
+.RE
+.PP
+
+.SS "void PathedProjectile\&.TakeDamage (int damage, GameObject instigator)"
+
+.PP
+Metoda wywo³ywana po zestrzeleniu pocisku przez gracza\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdamage\fP 
+.br
+\fIinstigator\fP 
+.RE
+.PP
+Uruchomienie efektu zniszczenia pocisku\&.
+.PP
+Zniszczenie obiektu pocisku\&.
+.PP
+Przyznanie punktów graczowi za zestrzelenie pocisku\&. 
+.PP
+Implementuje \fBITakeDamage\fP\&.
+.SS "void PathedProjectile\&.Update ()"
+
+.PP
+Aktualizacja po³o¿enia pocisku w czasie, oraz obs³uga jego zniszczenia\&. Aktualizacja po³o¿enia pocisku w czasie\&.
+.PP
+Sprawdzenie czy pocisk dotar³ do celu\&.
+.PP
+Uruchomienie efektu zniszczenia pocisku\&.
+.PP
+Odtworzenie dŸwiêku zniszczenia pocisku\&.
+.PP
+Zniszczenie obiektu pocisku, jeœli dotar³ do celu\&. 
+.SH "Dokumentacja atrybutÃ³w skÅ‚adowych"
+.PP 
+.SS "GameObject PathedProjectile\&.DestroyEffect"
+
+.PP
+Efekt towarzysz¹cy zniszczeniu pocisku\&. 
+.SS "AudioClip PathedProjectile\&.DestroySound"
+
+.PP
+DŸwiêk odtwarzany przy zniszczeniu pocisku\&. 
+.SS "int PathedProjectile\&.PointsToGivePlayer"
+
+.PP
+Punkty przyznawane graczowi za zestrzelenie pocisku\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu ÅºrÃ³dÅ‚owego programem Doxygen dla Game\&.

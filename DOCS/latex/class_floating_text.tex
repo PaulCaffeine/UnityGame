@@ -1,0 +1,77 @@
+\section{Dokumentacja klasy Floating\+Text}
+\label{class_floating_text}\index{Floating\+Text@{Floating\+Text}}
+
+
+Klasa odpowiedzialna za wyświetlanie na ekranie gry tekstu informującego o różnych zdarzeniach występujących w czasie rozgrywki.  
+
+
+Diagram dziedziczenia dla Floating\+Text\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_floating_text}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf On\+G\+U\+I} ()
+\begin{DoxyCompactList}\small\item\em Metoda pokazująca tekst na ekranie oraz usuwająca go. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Floating\+Text} {\bf Show} (string text, string style, {\bf I\+Floating\+Text\+Positioner} positioner)
+\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+string {\bf Text}\hspace{0.3cm}{\ttfamily  [get, set]}\label{class_floating_text_a8f7c9936c710b923c16bf231ac06030f}
+
+\begin{DoxyCompactList}\small\item\em Wyświetlany tekst. \end{DoxyCompactList}\item 
+G\+U\+I\+Style {\bf Style}\hspace{0.3cm}{\ttfamily  [get, set]}\label{class_floating_text_a4d9e7743444033595122aa17fad56e97}
+
+\begin{DoxyCompactList}\small\item\em Zmienna stylu interfejsu użytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiedzialna za wyświetlanie na ekranie gry tekstu informującego o różnych zdarzeniach występujących w czasie rozgrywki. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Floating\+Text@{Floating\+Text}!On\+G\+U\+I@{On\+G\+U\+I}}
+\index{On\+G\+U\+I@{On\+G\+U\+I}!Floating\+Text@{Floating\+Text}}
+\subsubsection[{On\+G\+U\+I()}]{\setlength{\rightskip}{0pt plus 5cm}void Floating\+Text.\+On\+G\+U\+I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_floating_text_a273d9408af60fdd88162447971168f91}
+
+
+Metoda pokazująca tekst na ekranie oraz usuwająca go. 
+
+Obliczenie wielkości tekstu.
+
+Jeśli wartość zmiennej wskazującej, gdzie ma być wyświetlony tekst jest pusta, niszczony jest obiekt tekstu.
+
+Usunięcie tekstu.
+
+Metoda tworząca tekst na ekranie. \index{Floating\+Text@{Floating\+Text}!Show@{Show}}
+\index{Show@{Show}!Floating\+Text@{Floating\+Text}}
+\subsubsection[{Show(string text, string style, I\+Floating\+Text\+Positioner positioner)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Floating\+Text} Floating\+Text.\+Show (
+\begin{DoxyParamCaption}
+\item[{string}]{text, }
+\item[{string}]{style, }
+\item[{{\bf I\+Floating\+Text\+Positioner}}]{positioner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_floating_text_aec904126f9b38b503a21b498347b3705}
+Stworzenie nowego obiektu gry.
+
+Ustawienie stylu tekstu.
+
+Ustawienie miejsca, w którym wyświetlony zostanie tekst.
+
+Ustawienie treści tekstu, która zostanie pokazany. 
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Floating\+Text.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\section{Dokumentacja klasy From\+World\+Point\+Text\+Positioner}
+\label{class_from_world_point_text_positioner}\index{From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}}
+
+
+Klasa określająca parametry wyświetlanego tekstu w świecie gry.  
+
+
+Diagram dziedziczenia dla From\+World\+Point\+Text\+Positioner\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_from_world_point_text_positioner}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf From\+World\+Point\+Text\+Positioner} (Camera Camera, Vector3 world\+Position, float time\+To\+Live, float speed)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozycjonera tekstu w grze, przyjmujący jako parametry pozycję tekstu w świecie gry, obiekt kamery, czas, przez jaki ma być wyświetlany tekst i prędkość poruszania się tekstu. \end{DoxyCompactList}\item 
+bool {\bf Get\+Position} (ref Vector2 position, G\+U\+I\+Content content, Vector2 size)
+\begin{DoxyCompactList}\small\item\em Metoda mówiąca \doxyref{Floating\+Text}{str.}{class_floating_text}, czy dalej wyświetlać tekst. Ustawia również współrzędne tekstu w grze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa określająca parametry wyświetlanego tekstu w świecie gry. 
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}!From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}}
+\index{From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}!From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}}
+\subsubsection[{From\+World\+Point\+Text\+Positioner(\+Camera Camera, Vector3 world\+Position, float time\+To\+Live, float speed)}]{\setlength{\rightskip}{0pt plus 5cm}From\+World\+Point\+Text\+Positioner.\+From\+World\+Point\+Text\+Positioner (
+\begin{DoxyParamCaption}
+\item[{Camera}]{Camera, }
+\item[{Vector3}]{world\+Position, }
+\item[{float}]{time\+To\+Live, }
+\item[{float}]{speed}
+\end{DoxyParamCaption}
+)}\label{class_from_world_point_text_positioner_aa9ba697a3e48cde9e486d184f8df532b}
+
+
+Konstruktor pozycjonera tekstu w grze, przyjmujący jako parametry pozycję tekstu w świecie gry, obiekt kamery, czas, przez jaki ma być wyświetlany tekst i prędkość poruszania się tekstu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Camera} & \\
+\hline
+{\em world\+Position} & \\
+\hline
+{\em time\+To\+Live} & \\
+\hline
+{\em speed} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!From\+World\+Point\+Text\+Positioner@{From\+World\+Point\+Text\+Positioner}}
+\subsubsection[{Get\+Position(ref Vector2 position, G\+U\+I\+Content content, Vector2 size)}]{\setlength{\rightskip}{0pt plus 5cm}bool From\+World\+Point\+Text\+Positioner.\+Get\+Position (
+\begin{DoxyParamCaption}
+\item[{ref Vector2}]{position, }
+\item[{G\+U\+I\+Content}]{content, }
+\item[{Vector2}]{size}
+\end{DoxyParamCaption}
+)}\label{class_from_world_point_text_positioner_aa42b82c9124f7d4aa1dcc6874af031d2}
+
+
+Metoda mówiąca \doxyref{Floating\+Text}{str.}{class_floating_text}, czy dalej wyświetlać tekst. Ustawia również współrzędne tekstu w grze. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & \\
+\hline
+{\em content} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+Jeśli podczas wyświetlania tekstu (dana klatka), upłynie czas życia napisu, metoda zwraca false. Klasa \doxyref{Floating\+Text}{str.}{class_floating_text} niszczy wtedy tekst.
+
+Środkujemy tekst na współrzędnych świata. 
+
+Implementuje {\bf I\+Floating\+Text\+Positioner} \doxyref{}{str.}{interface_i_floating_text_positioner}.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/From\+World\+Point\+Text\+Positione.\+cs\end{DoxyCompactItemize}

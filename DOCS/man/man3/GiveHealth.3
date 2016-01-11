@@ -1,0 +1,86 @@
+.TH "GiveHealth" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GiveHealth \- Klasa odpowiadająca za dodanie punktów zdrowia gracza po zebraniu apteczki\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour i \fBIPlayerRespawnListener\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnTriggerEnter2D\fP (Collider2D other)"
+.br
+.RI "\fIMetoda uruchamiana po zebraniu apteczki\&. \fP"
+.ti -1c
+.RI "void \fBOnPlayerRespawnInThisCheckpoint\fP (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+.br
+.RI "\fIRespawnowanie apteczki po powrocie do ostatniego checkpointu\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "GameObject \fBEffect\fP"
+.br
+.RI "\fIEfekt graficzny towarzyszący zebraniu apteczki\&. \fP"
+.ti -1c
+.RI "int \fBHealthToGive\fP"
+.br
+.RI "\fIIlośc punktów zdrowia dodawanych przez zebranie apteczki\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiadająca za dodanie punktów zdrowia gracza po zebraniu apteczki\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void GiveHealth\&.OnPlayerRespawnInThisCheckpoint (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+
+.PP
+Respawnowanie apteczki po powrocie do ostatniego checkpointu\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIcheckpoint\fP 
+.br
+\fIplayer\fP 
+.RE
+.PP
+
+.PP
+Implementuje \fBIPlayerRespawnListener\fP\&.
+.SS "void GiveHealth\&.OnTriggerEnter2D (Collider2D other)"
+
+.PP
+Metoda uruchamiana po zebraniu apteczki\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+Dodanie punktów zdrowia\&.
+.PP
+Zaincijowanie efektu graficznego\&.
+.PP
+Usunięcie apteczki po jej zebraniu ze świata gry w Unity\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "GameObject GiveHealth\&.Effect"
+
+.PP
+Efekt graficzny towarzyszący zebraniu apteczki\&. 
+.SS "int GiveHealth\&.HealthToGive"
+
+.PP
+Ilośc punktów zdrowia dodawanych przez zebranie apteczki\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

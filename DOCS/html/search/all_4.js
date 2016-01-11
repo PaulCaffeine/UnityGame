@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['followpath',['FollowPath',['../class_follow_path.html',1,'']]],
-  ['followtype',['FollowType',['../class_follow_path.html#aa15222ed17c7bb53f199e5cb5e5c9cef',1,'FollowPath']]]
+  ['effect',['Effect',['../class_give_health.html#a3b40fdd032931e918c636505222f0a6b',1,'GiveHealth.Effect()'],['../class_point_star.html#a1e7583d598c88f1f87d61b05efbe643f',1,'PointStar.Effect()']]]
 ];

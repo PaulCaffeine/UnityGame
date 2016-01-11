@@ -1,0 +1,70 @@
+.TH "CenteredTextPositioner" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CenteredTextPositioner \- Klasa obsługująca wyświetlanie tekstu na środku ekranu (po wejściu w nowy checkpoint)\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy \fBIFloatingTextPositioner\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBCenteredTextPositioner\fP (float speed)"
+.br
+.RI "\fIUstawienie szybkości wyświetlania komunikatów tekstowych\&. \fP"
+.ti -1c
+.RI "bool \fBGetPosition\fP (ref Vector2 position, GUIContent content, Vector2 size)"
+.br
+.RI "\fIMetoda mówiąca \fBFloatingText\fP, czy dalej wyświetlać tekst\&. Ustawia również współrzędne tekstu w grze\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa obsługująca wyświetlanie tekstu na środku ekranu (po wejściu w nowy checkpoint)\&. 
+
+
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "CenteredTextPositioner\&.CenteredTextPositioner (float speed)"
+
+.PP
+Ustawienie szybkości wyświetlania komunikatów tekstowych\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIspeed\fP 
+.RE
+.PP
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "bool CenteredTextPositioner\&.GetPosition (ref Vector2 position, GUIContent content, Vector2 size)"
+
+.PP
+Metoda mówiąca \fBFloatingText\fP, czy dalej wyświetlać tekst\&. Ustawia również współrzędne tekstu w grze\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP 
+.br
+\fIcontent\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+.RE
+.PP
+Jeśli _textPosition osiągnie 1, tekst nie będzie dalej wyświetlany\&.
+.PP
+Ustawienie pozycji tekstu na ekranie\&. 
+.PP
+Implementuje \fBIFloatingTextPositioner\fP\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

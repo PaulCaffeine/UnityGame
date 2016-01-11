@@ -1,0 +1,100 @@
+\section{Dokumentacja klasy Give\+Health}
+\label{class_give_health}\index{Give\+Health@{Give\+Health}}
+
+
+Klasa odpowiadająca za dodanie punktów zdrowia gracza po zebraniu apteczki.  
+
+
+Diagram dziedziczenia dla Give\+Health\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_give_health}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf On\+Trigger\+Enter2\+D} (Collider2\+D other)
+\begin{DoxyCompactList}\small\item\em Metoda uruchamiana po zebraniu apteczki. \end{DoxyCompactList}\item 
+void {\bf On\+Player\+Respawn\+In\+This\+Checkpoint} ({\bf Checkpoint} checkpoint, {\bf Player} player)
+\begin{DoxyCompactList}\small\item\em Respawnowanie apteczki po powrocie do ostatniego checkpointu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bf Effect}
+\begin{DoxyCompactList}\small\item\em Efekt graficzny towarzyszący zebraniu apteczki. \end{DoxyCompactList}\item 
+int {\bf Health\+To\+Give}
+\begin{DoxyCompactList}\small\item\em Ilośc punktów zdrowia dodawanych przez zebranie apteczki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za dodanie punktów zdrowia gracza po zebraniu apteczki. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Give\+Health@{Give\+Health}!On\+Player\+Respawn\+In\+This\+Checkpoint@{On\+Player\+Respawn\+In\+This\+Checkpoint}}
+\index{On\+Player\+Respawn\+In\+This\+Checkpoint@{On\+Player\+Respawn\+In\+This\+Checkpoint}!Give\+Health@{Give\+Health}}
+\subsubsection[{On\+Player\+Respawn\+In\+This\+Checkpoint(\+Checkpoint checkpoint, Player player)}]{\setlength{\rightskip}{0pt plus 5cm}void Give\+Health.\+On\+Player\+Respawn\+In\+This\+Checkpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Checkpoint}}]{checkpoint, }
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}\label{class_give_health_a53c1f61540ebcd9c2ae44537b309a1a1}
+
+
+Respawnowanie apteczki po powrocie do ostatniego checkpointu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em checkpoint} & \\
+\hline
+{\em player} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementuje {\bf I\+Player\+Respawn\+Listener} \doxyref{}{str.}{interface_i_player_respawn_listener}.
+
+\index{Give\+Health@{Give\+Health}!On\+Trigger\+Enter2\+D@{On\+Trigger\+Enter2\+D}}
+\index{On\+Trigger\+Enter2\+D@{On\+Trigger\+Enter2\+D}!Give\+Health@{Give\+Health}}
+\subsubsection[{On\+Trigger\+Enter2\+D(\+Collider2\+D other)}]{\setlength{\rightskip}{0pt plus 5cm}void Give\+Health.\+On\+Trigger\+Enter2\+D (
+\begin{DoxyParamCaption}
+\item[{Collider2\+D}]{other}
+\end{DoxyParamCaption}
+)}\label{class_give_health_a6ba8edc28aa1e0f4d3918bcf1d231a00}
+
+
+Metoda uruchamiana po zebraniu apteczki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+Dodanie punktów zdrowia.
+
+Zaincijowanie efektu graficznego.
+
+Usunięcie apteczki po jej zebraniu ze świata gry w Unity. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Give\+Health@{Give\+Health}!Effect@{Effect}}
+\index{Effect@{Effect}!Give\+Health@{Give\+Health}}
+\subsubsection[{Effect}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Give\+Health.\+Effect}\label{class_give_health_a3b40fdd032931e918c636505222f0a6b}
+
+
+Efekt graficzny towarzyszący zebraniu apteczki. 
+
+\index{Give\+Health@{Give\+Health}!Health\+To\+Give@{Health\+To\+Give}}
+\index{Health\+To\+Give@{Health\+To\+Give}!Give\+Health@{Give\+Health}}
+\subsubsection[{Health\+To\+Give}]{\setlength{\rightskip}{0pt plus 5cm}int Give\+Health.\+Health\+To\+Give}\label{class_give_health_aa4ac9c92c64cc4c4d88a3acff8abab85}
+
+
+Ilośc punktów zdrowia dodawanych przez zebranie apteczki. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Give\+Health.\+cs\end{DoxyCompactItemize}

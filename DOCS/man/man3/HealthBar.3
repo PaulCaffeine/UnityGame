@@ -1,0 +1,65 @@
+.TH "HealthBar" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HealthBar \- Klasa pasku zdrowia pojawiającego się nad graczem\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIAktualizacja punktów zdrowia gracza oraz odpowiadającego koloru\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP \fBPlayer\fP"
+.br
+.ti -1c
+.RI "Transform \fBForegroundSprite\fP"
+.br
+.ti -1c
+.RI "SpriteRenderer \fBForegroundRenderer\fP"
+.br
+.ti -1c
+.RI "Color \fBMaxHealthColor\fP = new Color(255 / 255f, 63 / 255f, 63 / 255f)"
+.br
+.RI "\fIUstawienie koloru maksymalnej wartości zdrowia na niebieski\&. \fP"
+.ti -1c
+.RI "Color \fBMinHealthColor\fP = new Color(64 / 255f, 137 / 255f, 255 / 255f)"
+.br
+.RI "\fIUstawienie koloru minimalnej wartości zdrowia na czerwony\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa pasku zdrowia pojawiającego się nad graczem\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void HealthBar\&.Update ()"
+
+.PP
+Aktualizacja punktów zdrowia gracza oraz odpowiadającego koloru\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "Color HealthBar\&.MaxHealthColor = new Color(255 / 255f, 63 / 255f, 63 / 255f)"
+
+.PP
+Ustawienie koloru maksymalnej wartości zdrowia na niebieski\&. 
+.SS "Color HealthBar\&.MinHealthColor = new Color(64 / 255f, 137 / 255f, 255 / 255f)"
+
+.PP
+Ustawienie koloru minimalnej wartości zdrowia na czerwony\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

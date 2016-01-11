@@ -1,0 +1,118 @@
+.TH "ControllerState2D" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControllerState2D \- klasa \fBControllerState2D\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.RI "\fIReset stanu \fP"
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "\fIDebug \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsCollidingRight\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja z prawej strony \fP"
+.ti -1c
+.RI "bool \fBIsCollidingLeft\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja z lewej strony \fP"
+.ti -1c
+.RI "bool \fBIsCollidingAbove\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja powyżej \fP"
+.ti -1c
+.RI "bool \fBIsCollidingBelow\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja z poniżej \fP"
+.ti -1c
+.RI "bool \fBIsMovingDownSlope\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja ruch po pochyłej (dół) \fP"
+.ti -1c
+.RI "bool \fBIsMovingUpSlope\fP\fC [get, set]\fP"
+.br
+.RI "\fIKolizja ruch po pochyłej (góra) \fP"
+.ti -1c
+.RI "bool \fBIsGrounded\fP\fC [get]\fP"
+.br
+.RI "\fIKolizja ziemia \fP"
+.ti -1c
+.RI "float \fBSlopeAngle\fP\fC [get, set]\fP"
+.br
+.RI "\fIKąt pochyłej \fP"
+.ti -1c
+.RI "bool \fBHasCollisions\fP\fC [get]\fP"
+.br
+.RI "\fIKolizja jakakolwiek \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBControllerState2D\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void ControllerState2D\&.Reset ()"
+
+.PP
+Reset stanu 
+.SS "override string ControllerState2D\&.ToString ()"
+
+.PP
+Debug 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "bool ControllerState2D\&.HasCollisions\fC [get]\fP"
+
+.PP
+Kolizja jakakolwiek 
+.SS "bool ControllerState2D\&.IsCollidingAbove\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja powyżej 
+.SS "bool ControllerState2D\&.IsCollidingBelow\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja z poniżej 
+.SS "bool ControllerState2D\&.IsCollidingLeft\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja z lewej strony 
+.SS "bool ControllerState2D\&.IsCollidingRight\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja z prawej strony 
+.SS "bool ControllerState2D\&.IsGrounded\fC [get]\fP"
+
+.PP
+Kolizja ziemia 
+.SS "bool ControllerState2D\&.IsMovingDownSlope\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja ruch po pochyłej (dół) 
+.SS "bool ControllerState2D\&.IsMovingUpSlope\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kolizja ruch po pochyłej (góra) 
+.SS "float ControllerState2D\&.SlopeAngle\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Kąt pochyłej 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

@@ -1,0 +1,60 @@
+.TH "ControllerParameters2D" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControllerParameters2D \- klasa \fBControllerParameters2D\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Typy publiczne"
+
+.in +1c
+.ti -1c
+.RI "enum \fBJumpBehavior\fP { \fBCanJumpOnGround\fP, \fBCanJumpAnywhere\fP, \fBCantJump\fP }
+.RI "\fICzy mozna wykonac skok i w jakich okolicznosciach\&. \fP""
+.br
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "Vector2 \fBMaxVelocity\fP = new Vector2(float\&.MaxValue, float\&.MaxValue)"
+.br
+.RI "\fIUstawienie maksymalnej predkosci gracza\&. \fP"
+.ti -1c
+.RI "float \fBSlopeLimit\fP = 30"
+.br
+.RI "\fISlopeLimit\&. \fP"
+.ti -1c
+.RI "float \fBGravity\fP = \-25f"
+.br
+.RI "\fIGrawitacja\&. \fP"
+.ti -1c
+.RI "\fBJumpBehavior\fP \fBJumpRestrictions\fP"
+.br
+.RI "\fIJumpRestrictions\&. \fP"
+.ti -1c
+.RI "float \fBJumpFrequency\fP = \&.25f"
+.br
+.RI "\fICzęstotliwość skoku\&. \fP"
+.ti -1c
+.RI "float \fBJumpMagnitude\fP = 12"
+.br
+.RI "\fISiła skoku\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBControllerParameters2D\fP 
+
+
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "float ControllerParameters2D\&.SlopeLimit = 30"
+
+.PP
+SlopeLimit\&. Nie mozna wejsc na teren o nachyleniu wiekszym od 30 stopni\&. Ustalenie grawitacji, dopusczalnej czestotliwosci skokow i ich sily\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

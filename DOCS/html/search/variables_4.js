@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['layername',['LayerName',['../class_sort_particle_system.html#a9d51c7cdcf653de70767eef676bce85d',1,'SortParticleSystem']]]
+  ['effect',['Effect',['../class_give_health.html#a3b40fdd032931e918c636505222f0a6b',1,'GiveHealth.Effect()'],['../class_point_star.html#a1e7583d598c88f1f87d61b05efbe643f',1,'PointStar.Effect()']]]
 ];

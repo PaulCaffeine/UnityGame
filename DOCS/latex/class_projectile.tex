@@ -1,0 +1,234 @@
+\section{Dokumentacja klasy Projectile}
+\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+Podstawowa klasa pocisku.  
+
+
+Diagram dziedziczenia dla Projectile\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_projectile}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Initialize} (Game\+Object owner, Vector2 direction, Vector2 initial\+Velocity)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja pocisku, pobierająca kierunek strzału, prędkość obiektu strzelającego, oraz obiekt strzelający jako parametry. \end{DoxyCompactList}\item 
+virtual void {\bf On\+Initialized} ()
+\begin{DoxyCompactList}\small\item\em Pusta metoda, którą mogą zaimplementować klasy potomne. \end{DoxyCompactList}\item 
+virtual void {\bf On\+Trigger\+Enter2\+D} (Collider2\+D other)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po zderzeniu pocisku z innym obiektem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf Speed}
+\begin{DoxyCompactList}\small\item\em Prędkość pocisku. \end{DoxyCompactList}\item 
+Layer\+Mask {\bf Collision\+Mask}
+\begin{DoxyCompactList}\small\item\em Warstwa kolizji pocisku z otoczeniem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf On\+Not\+Collide\+With} (Collider2\+D other)
+\begin{DoxyCompactList}\small\item\em Pusta metoda, którą mogą zaimplementować klasy potomne. \end{DoxyCompactList}\item 
+virtual void {\bf On\+Collide\+Owner} ()
+\begin{DoxyCompactList}\small\item\em Pusta metoda, którą mogą zaimplementować klasy potomne. \end{DoxyCompactList}\item 
+virtual void {\bf On\+Collide\+Take\+Damage} (Collider2\+D other, {\bf I\+Take\+Damage} take\+Damage)
+\begin{DoxyCompactList}\small\item\em Pusta metoda, którą mogą zaimplementować klasy potomne. \end{DoxyCompactList}\item 
+virtual void {\bf On\+Collide\+Other} (Collider2\+D other)
+\begin{DoxyCompactList}\small\item\em Pusta metoda, którą mogą zaimplementować klasy potomne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Właściwości}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bf Owner}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Obiekt, który wystrzeli pocisk. \end{DoxyCompactList}\item 
+Vector2 {\bf Direction}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Kierunek strzału. \end{DoxyCompactList}\item 
+Vector2 {\bf Initial\+Velocity}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Prędkość obiektu-\/właściciela pocisku, która później jest dodawana do prędkości pocisku podczas wystrzału. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Podstawowa klasa pocisku. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Projectile@{Projectile}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Projectile@{Projectile}}
+\subsubsection[{Initialize(\+Game\+Object owner, Vector2 direction, Vector2 initial\+Velocity)}]{\setlength{\rightskip}{0pt plus 5cm}void Projectile.\+Initialize (
+\begin{DoxyParamCaption}
+\item[{Game\+Object}]{owner, }
+\item[{Vector2}]{direction, }
+\item[{Vector2}]{initial\+Velocity}
+\end{DoxyParamCaption}
+)}\label{class_projectile_a3e3cdf6fcfd15893d63623affc270ded}
+
+
+Inicjalizacja pocisku, pobierająca kierunek strzału, prędkość obiektu strzelającego, oraz obiekt strzelający jako parametry. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em owner} & \\
+\hline
+{\em direction} & \\
+\hline
+{\em initial\+Velocity} & \\
+\hline
+\end{DoxyParams}
+Ustawienie kierunku pocisku.
+
+Ustawienie obiektu oddającego strzał.
+
+Ustawienie kierunku strzału.
+
+Ustawienie początkowej prędkości strzału. \index{Projectile@{Projectile}!On\+Collide\+Other@{On\+Collide\+Other}}
+\index{On\+Collide\+Other@{On\+Collide\+Other}!Projectile@{Projectile}}
+\subsubsection[{On\+Collide\+Other(\+Collider2\+D other)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Collide\+Other (
+\begin{DoxyParamCaption}
+\item[{Collider2\+D}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_projectile_ad7deb35a74b4a3ee934d554b419d63af}
+
+
+Pusta metoda, którą mogą zaimplementować klasy potomne. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w {\bf Simple\+Projectile} \doxyref{}{str.}{class_simple_projectile_a51baf8e9ef7543293b810f12a6882db0}.
+
+\index{Projectile@{Projectile}!On\+Collide\+Owner@{On\+Collide\+Owner}}
+\index{On\+Collide\+Owner@{On\+Collide\+Owner}!Projectile@{Projectile}}
+\subsubsection[{On\+Collide\+Owner()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Collide\+Owner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_projectile_a0f7dd0259be773db60a3cd6fca06e8bd}
+
+
+Pusta metoda, którą mogą zaimplementować klasy potomne. 
+
+\index{Projectile@{Projectile}!On\+Collide\+Take\+Damage@{On\+Collide\+Take\+Damage}}
+\index{On\+Collide\+Take\+Damage@{On\+Collide\+Take\+Damage}!Projectile@{Projectile}}
+\subsubsection[{On\+Collide\+Take\+Damage(\+Collider2\+D other, I\+Take\+Damage take\+Damage)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Collide\+Take\+Damage (
+\begin{DoxyParamCaption}
+\item[{Collider2\+D}]{other, }
+\item[{{\bf I\+Take\+Damage}}]{take\+Damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_projectile_adafb479f251df04ac62f3806d542780b}
+
+
+Pusta metoda, którą mogą zaimplementować klasy potomne. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & \\
+\hline
+{\em take\+Damage} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w {\bf Simple\+Projectile} \doxyref{}{str.}{class_simple_projectile_ab720e692e4fbc643d8ffc86f40636a67}.
+
+\index{Projectile@{Projectile}!On\+Initialized@{On\+Initialized}}
+\index{On\+Initialized@{On\+Initialized}!Projectile@{Projectile}}
+\subsubsection[{On\+Initialized()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_projectile_a624c604c99612d5f770e7933398926e9}
+
+
+Pusta metoda, którą mogą zaimplementować klasy potomne. 
+
+\index{Projectile@{Projectile}!On\+Not\+Collide\+With@{On\+Not\+Collide\+With}}
+\index{On\+Not\+Collide\+With@{On\+Not\+Collide\+With}!Projectile@{Projectile}}
+\subsubsection[{On\+Not\+Collide\+With(\+Collider2\+D other)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Not\+Collide\+With (
+\begin{DoxyParamCaption}
+\item[{Collider2\+D}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_projectile_aed16cdf72286c332c5cee2933706ca97}
+
+
+Pusta metoda, którą mogą zaimplementować klasy potomne. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\index{Projectile@{Projectile}!On\+Trigger\+Enter2\+D@{On\+Trigger\+Enter2\+D}}
+\index{On\+Trigger\+Enter2\+D@{On\+Trigger\+Enter2\+D}!Projectile@{Projectile}}
+\subsubsection[{On\+Trigger\+Enter2\+D(\+Collider2\+D other)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Projectile.\+On\+Trigger\+Enter2\+D (
+\begin{DoxyParamCaption}
+\item[{Collider2\+D}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_projectile_a107df718306594b9e793879cafcc1072}
+
+
+Metoda wywoływana po zderzeniu pocisku z innym obiektem. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+Pocisk zderzył się z czymś, co nie odpowiada masce kolizji.
+
+Pocisk zderzył się z obiektem, który wystrzelił pocisk.
+
+Pocisk zderzył się z obiektem, który może przyjmować obrażenia.
+
+Żadne z powyższych. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Projectile@{Projectile}!Collision\+Mask@{Collision\+Mask}}
+\index{Collision\+Mask@{Collision\+Mask}!Projectile@{Projectile}}
+\subsubsection[{Collision\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Mask Projectile.\+Collision\+Mask}\label{class_projectile_a45d75a6361f9a64b50291ab84622bcac}
+
+
+Warstwa kolizji pocisku z otoczeniem. 
+
+\index{Projectile@{Projectile}!Speed@{Speed}}
+\index{Speed@{Speed}!Projectile@{Projectile}}
+\subsubsection[{Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Projectile.\+Speed}\label{class_projectile_a635b74f687fe3e37f8602bb18d13f90f}
+
+
+Prędkość pocisku. 
+
+
+
+\subsection{Dokumentacja właściwości}
+\index{Projectile@{Projectile}!Direction@{Direction}}
+\index{Direction@{Direction}!Projectile@{Projectile}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}Vector2 Projectile.\+Direction\hspace{0.3cm}{\ttfamily [get]}}\label{class_projectile_a117a5b2f9a9e05cd541a949d47f8d83c}
+
+
+Kierunek strzału. 
+
+\index{Projectile@{Projectile}!Initial\+Velocity@{Initial\+Velocity}}
+\index{Initial\+Velocity@{Initial\+Velocity}!Projectile@{Projectile}}
+\subsubsection[{Initial\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}Vector2 Projectile.\+Initial\+Velocity\hspace{0.3cm}{\ttfamily [get]}}\label{class_projectile_a7a9f5f3770332c4cbd42afc1e33cddff}
+
+
+Prędkość obiektu-\/właściciela pocisku, która później jest dodawana do prędkości pocisku podczas wystrzału. 
+
+\index{Projectile@{Projectile}!Owner@{Owner}}
+\index{Owner@{Owner}!Projectile@{Projectile}}
+\subsubsection[{Owner}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Projectile.\+Owner\hspace{0.3cm}{\ttfamily [get]}}\label{class_projectile_a5599c73fed5fdef2a40e2a5abd6e013a}
+
+
+Obiekt, który wystrzeli pocisk. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Projectile.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+.TH "CameraController" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CameraController \- klasa \fBCameraController\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.RI "\fIUstawienie ograniczeń rozmiaru obszaru, w którym może się poruszać kamera, oraz ustawienie podążania kamery za graczem\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIMetoda Update \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "Transform \fBPlayer\fP"
+.br
+.RI "\fIObiekt gracza\&. \fP"
+.ti -1c
+.RI "Vector2 \fBMargin\fP"
+.br
+.RI "\fIWartość progu ruchu gracza, od którego ma nastapić zmiana położenia kamery\&. \fP"
+.ti -1c
+.RI "Vector2 \fBSmoothing\fP"
+.br
+.RI "\fIZapewnienie płynności ruchu kamery\&. \fP"
+.ti -1c
+.RI "BoxCollider2D \fBBounds\fP"
+.br
+.RI "\fIOgraniczenia ruchu kamery w świecie gry\&. \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsFollowing\fP\fC [get, set]\fP"
+.br
+.RI "\fIZmienna, mówiąca, czy kamera podąża za graczem\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBCameraController\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void CameraController\&.Start ()"
+
+.PP
+Ustawienie ograniczeń rozmiaru obszaru, w którym może się poruszać kamera, oraz ustawienie podążania kamery za graczem\&. 
+.SS "void CameraController\&.Update ()"
+
+.PP
+Metoda Update Obecne położenie kamery\&.
+.PP
+Jeśli odległość między położeniem kamery, a położeniem gracza w poziomie jest większa od danej wartości\&.
+.PP
+Wykonaj ruch kamery z pozycji x do pozycji gracza, z określonym efektem płynności w grze\&.
+.PP
+Jeśli odległość między położeniem kamery, a położeniem gracza w pionie jest większa od danej wartości\&.
+.PP
+Wykonaj ruch kamery z pozycji y do pozycji gracza, z określonym efektem płynności w grze\&.
+.PP
+camera\&.ortographicSize to połowa wysokości boxu kamery\&. Mnożymy tę wartośc przez stosunek szerokości do wysokości, aby otrzymać połowę szerokości boxu kamery\&.
+.PP
+Ograniczanie położenia kamery (x,y) do rozmiarów Bounds, czyli boxu ograniczającego ruch kamery w świecie gry\&.
+.PP
+Ustawienie uaktualnionej pozycji kamery\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "BoxCollider2D CameraController\&.Bounds"
+
+.PP
+Ograniczenia ruchu kamery w świecie gry\&. 
+.SS "Vector2 CameraController\&.Margin"
+
+.PP
+Wartość progu ruchu gracza, od którego ma nastapić zmiana położenia kamery\&. 
+.SS "Transform CameraController\&.Player"
+
+.PP
+Obiekt gracza\&. 
+.SS "Vector2 CameraController\&.Smoothing"
+
+.PP
+Zapewnienie płynności ruchu kamery\&. 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "bool CameraController\&.IsFollowing\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Zmienna, mówiąca, czy kamera podąża za graczem\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

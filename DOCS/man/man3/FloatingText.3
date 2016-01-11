@@ -1,0 +1,67 @@
+.TH "FloatingText" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FloatingText \- Klasa odpowiedzialna za wyświetlanie na ekranie gry tekstu informującego o różnych zdarzeniach występujących w czasie rozgrywki\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnGUI\fP ()"
+.br
+.RI "\fIMetoda pokazująca tekst na ekranie oraz usuwająca go\&. \fP"
+.in -1c
+.SS "Statyczne metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "static \fBFloatingText\fP \fBShow\fP (string text, string style, \fBIFloatingTextPositioner\fP positioner)"
+.br
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "string \fBText\fP\fC [get, set]\fP"
+.br
+.RI "\fIWyświetlany tekst\&. \fP"
+.ti -1c
+.RI "GUIStyle \fBStyle\fP\fC [get, set]\fP"
+.br
+.RI "\fIZmienna stylu interfejsu użytkownika\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiedzialna za wyświetlanie na ekranie gry tekstu informującego o różnych zdarzeniach występujących w czasie rozgrywki\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void FloatingText\&.OnGUI ()"
+
+.PP
+Metoda pokazująca tekst na ekranie oraz usuwająca go\&. Obliczenie wielkości tekstu\&.
+.PP
+Jeśli wartość zmiennej wskazującej, gdzie ma być wyświetlony tekst jest pusta, niszczony jest obiekt tekstu\&.
+.PP
+Usunięcie tekstu\&.
+.PP
+Metoda tworząca tekst na ekranie\&. 
+.SS "static \fBFloatingText\fP FloatingText\&.Show (string text, string style, \fBIFloatingTextPositioner\fP positioner)\fC [static]\fP"
+Stworzenie nowego obiektu gry\&.
+.PP
+Ustawienie stylu tekstu\&.
+.PP
+Ustawienie miejsca, w którym wyświetlony zostanie tekst\&.
+.PP
+Ustawienie treści tekstu, która zostanie pokazany\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

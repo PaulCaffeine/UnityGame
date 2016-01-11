@@ -1,0 +1,44 @@
+.TH "PathDefinition" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PathDefinition \- klasa \fBPathDefinition\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "IEnumerator< Transform > \fBGetPathEnumerator\fP ()"
+.br
+.ti -1c
+.RI "void \fBOnDrawGizmos\fP ()"
+.br
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "Transform[] \fBPoints\fP"
+.br
+.RI "\fIPunkty sciezki\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBPathDefinition\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "IEnumerator<Transform> PathDefinition\&.GetPathEnumerator ()"
+Enumerator punktow w sciezce\&. Zapewnia poruszanie sie np\&. platform w obie strony po sciezce\&. 
+.SS "void PathDefinition\&.OnDrawGizmos ()"
+Rysowanie linii miedzy punktami sciezki w Scene view, upewniajac sie czy istnieje odpowiednia ilosc punktow i omijajac usuniete\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

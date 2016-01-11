@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['backgroundparallax',['BackgroundParallax',['../class_background_parallax.html',1,'']]]
+  ['autodestroyparticlesystem',['AutoDestroyParticleSystem',['../class_auto_destroy_particle_system.html',1,'']]]
 ];

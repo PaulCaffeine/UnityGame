@@ -1,0 +1,166 @@
+.TH "LevelManager" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LevelManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "\fIUstawienie instancji klasy, do której można się później odwoływać w innych klasach\&. \fP"
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIAktualizowanie pozycji gracza względem checkpointów, liczby punktów i upływu czasu od osiągnięcia ostatniego checkpointu\&. \fP"
+.ti -1c
+.RI "void \fBGotoNextLevel\fP (string levelName)"
+.br
+.RI "\fIMetoda uruchamiająca procedurę przejścia do następnego poziomu\&. \fP"
+.ti -1c
+.RI "void \fBKillPlayer\fP ()"
+.br
+.RI "\fIUruchomienie procedury zabicia gracza\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBCheckpoint\fP \fBDebugSpawn\fP"
+.br
+.RI "\fI\fBCheckpoint\fP związany z spawnowaniem gracza w edytorze Unity (jeśli go ustawimy w Unity)\&. \fP"
+.ti -1c
+.RI "int \fBBonusCutoffSeconds\fP"
+.br
+.RI "\fICzas na osiągnięcie nowego checkpointu\&. \fP"
+.ti -1c
+.RI "int \fBBonusSecondMultiplier\fP"
+.br
+.RI "\fIMnożnik dotyczący zdobotych punktów za dotarcie do checkpointu w wyznaczonym czasie\&. \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "static \fBLevelManager\fP \fBInstance\fP\fC [get]\fP"
+.br
+.RI "\fIInstancja LevelManagera\&. \fP"
+.ti -1c
+.RI "\fBPlayer\fP \fBPlayer\fP\fC [get]\fP"
+.br
+.RI "\fIGracz\&. \fP"
+.ti -1c
+.RI "\fBCameraController\fP \fBCamera\fP\fC [get]\fP"
+.br
+.RI "\fIKamera\&. \fP"
+.ti -1c
+.RI "TimeSpan \fBRunningTime\fP\fC [get]\fP"
+.br
+.RI "\fIUpływ czasu od ostatniej wartości _started\&. \fP"
+.ti -1c
+.RI "int \fBCurrentTimeBonus\fP\fC [get]\fP"
+.br
+.RI "\fIObliczenie bonusu czasowego za osiągnięcie nowego checkpointu w wyznaczonym czasie\&. \fP"
+.in -1c
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void LevelManager\&.Awake ()"
+
+.PP
+Ustawienie instancji klasy, do której można się później odwoływać w innych klasach\&. 
+.SS "void LevelManager\&.GotoNextLevel (string levelName)"
+
+.PP
+Metoda uruchamiająca procedurę przejścia do następnego poziomu\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIlevelName\fP 
+.RE
+.PP
+
+.SS "void LevelManager\&.KillPlayer ()"
+
+.PP
+Uruchomienie procedury zabicia gracza\&. 
+.SS "void LevelManager\&.Start ()"
+
+.PP
+Posortowana lista checkpointów\&.
+.PP
+Jeśli nie ma checkpointów, ustaw flagę na -1, w przeciwnym wypadku ustaw indeks na 0\&.
+.PP
+Gracz i kamera są teraz w lokalnej pamięci podręcznej (cache) LevelManagera\&.
+.PP
+Ustawienie wartości początkowej _started na aktualny czas\&.
+.PP
+Przypisanie obiektów (gwiazdek) do poszczególnych checkpointów (patrząc wstecz od danego checkpointu)\&.
+.PP
+Wykonywane tylko w edytorze Unity, ustawia domyślny punkt spawnu gracza jako DebugSpawn, jeśli ustawiony jest DebugSpawn (nie ma wartości null)\&. 
+.SS "void LevelManager\&.Update ()"
+
+.PP
+Aktualizowanie pozycji gracza względem checkpointów, liczby punktów i upływu czasu od osiągnięcia ostatniego checkpointu\&. Sprawdzamy czy jesteśmy na ostatnim checkpoincie (jeśli tak, to nie ma sensu wykonywać dalszych operacji - nie ma dalszych checkpointów)\&.
+.PP
+Sprawdzamy czy osiągnęliśmy nowy checkpoint, jeśli nie, wracamy\&.
+.PP
+Kod wykonywany, gdy osiągnięto nowy checkpoint\&. Opuszczenie starego checkpointu\&.
+.PP
+Inkrementacja wartości indeksu obecnego checkpointu\&.
+.PP
+Wejście w nowy checkpoint\&.
+.PP
+Dodanie ewentualnego bonusu czasowego\&.
+.PP
+Zapisanie liczby punktów\&.
+.PP
+Zresetowanie czasu w _started\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "int LevelManager\&.BonusCutoffSeconds"
+
+.PP
+Czas na osiągnięcie nowego checkpointu\&. 
+.SS "int LevelManager\&.BonusSecondMultiplier"
+
+.PP
+Mnożnik dotyczący zdobotych punktów za dotarcie do checkpointu w wyznaczonym czasie\&. 
+.SS "\fBCheckpoint\fP LevelManager\&.DebugSpawn"
+
+.PP
+\fBCheckpoint\fP związany z spawnowaniem gracza w edytorze Unity (jeśli go ustawimy w Unity)\&. 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "\fBCameraController\fP LevelManager\&.Camera\fC [get]\fP"
+
+.PP
+Kamera\&. 
+.SS "int LevelManager\&.CurrentTimeBonus\fC [get]\fP"
+
+.PP
+Obliczenie bonusu czasowego za osiągnięcie nowego checkpointu w wyznaczonym czasie\&. 
+.SS "\fBLevelManager\fP LevelManager\&.Instance\fC [static]\fP, \fC [get]\fP"
+
+.PP
+Instancja LevelManagera\&. 
+.SS "\fBPlayer\fP LevelManager\&.Player\fC [get]\fP"
+
+.PP
+Gracz\&. 
+.SS "TimeSpan LevelManager\&.RunningTime\fC [get]\fP"
+
+.PP
+Upływ czasu od ostatniej wartości _started\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

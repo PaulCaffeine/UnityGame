@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['handlecollisions',['HandleCollisions',['../class_character_controller2_d.html#aa693a23e691347cf526060141fad519e',1,'CharacterController2D']]],
-  ['handleinput',['HandleInput',['../class_player.html#a6d893d1229110e7eb17eb7d895198717',1,'Player']]],
-  ['hascollisions',['HasCollisions',['../class_controller_state2_d.html#a81b74ffe89ca998f186dfcc01cd74a80',1,'ControllerState2D']]]
+  ['gamehud',['GameHud',['../class_game_hud.html',1,'']]],
+  ['gamemanager',['GameManager',['../class_game_manager.html',1,'']]],
+  ['getpathenumerator',['GetPathEnumerator',['../class_path_definition.html#a0526b4b4e15883dad98b64bbed920f96',1,'PathDefinition']]],
+  ['getposition',['GetPosition',['../class_centered_text_positioner.html#ad620db2ea6222bd334b95e0b4e50464d',1,'CenteredTextPositioner.GetPosition()'],['../class_from_world_point_text_positioner.html#aa42b82c9124f7d4aa1dcc6874af031d2',1,'FromWorldPointTextPositioner.GetPosition()']]],
+  ['givedamagetoplayer',['GiveDamageToPlayer',['../class_give_damage_to_player.html',1,'']]],
+  ['givehealth',['GiveHealth',['../class_give_health.html',1,'GiveHealth'],['../class_player.html#ab5b7362150ceb3bdd0ea0264799a1b60',1,'Player.GiveHealth()']]],
+  ['gotonextlevel',['GotoNextLevel',['../class_level_manager.html#aff2b84fbe01a7639e716fa8eceae27b6',1,'LevelManager']]],
+  ['gravity',['Gravity',['../class_controller_parameters2_d.html#ae83e87db83f426c232a43dd15e30fb38',1,'ControllerParameters2D']]]
 ];

@@ -1,0 +1,189 @@
+\section{Dokumentacja klasy Simple\+Enemy\+Ai}
+\label{class_simple_enemy_ai}\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+
+
+Klasa odpowiadająca za podstawowe działania przeciwnika w świecie gry.  
+
+
+Diagram dziedziczenia dla Simple\+Enemy\+Ai\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simple_enemy_ai}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Start} ()
+\begin{DoxyCompactList}\small\item\em Ustawienie parametrów początkowych\+: kontrolera, kierunku i pozycji początkowej. \end{DoxyCompactList}\item 
+void {\bf Update} ()
+\begin{DoxyCompactList}\small\item\em Aktualizacja położenia przeciwnika oraz obsługa strzelania pociskami. \end{DoxyCompactList}\item 
+void {\bf Take\+Damage} (int damage, Game\+Object instigator)
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana po otrzymaniu obrażeń od gracza. \end{DoxyCompactList}\item 
+void {\bf On\+Player\+Respawn\+In\+This\+Checkpoint} ({\bf Checkpoint} checkpoint, {\bf Player} player)
+\begin{DoxyCompactList}\small\item\em Zrespawnowanie przeciwnika w danym checkpoincie razem z graczem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf Speed}
+\begin{DoxyCompactList}\small\item\em Prędkość przeciwnika. \end{DoxyCompactList}\item 
+float {\bf Fire\+Rate} = 1
+\begin{DoxyCompactList}\small\item\em Częstotliwość oddawania strzałów przez przeciwnika. \end{DoxyCompactList}\item 
+{\bf Projectile} {\bf Projectile}
+\begin{DoxyCompactList}\small\item\em Pocisk. \end{DoxyCompactList}\item 
+Game\+Object {\bf Destroyed\+Effect}
+\begin{DoxyCompactList}\small\item\em Efekt zniszczenia przeciwnika. \end{DoxyCompactList}\item 
+int {\bf Points\+To\+Give\+Player}
+\begin{DoxyCompactList}\small\item\em Punkty przyznawane graczowi za zestrzelenie przeciwnika. \end{DoxyCompactList}\item 
+Audio\+Clip {\bf Shoot\+Sound}
+\begin{DoxyCompactList}\small\item\em Dwięk strzału przeciwnika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za podstawowe działania przeciwnika w świecie gry. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!On\+Player\+Respawn\+In\+This\+Checkpoint@{On\+Player\+Respawn\+In\+This\+Checkpoint}}
+\index{On\+Player\+Respawn\+In\+This\+Checkpoint@{On\+Player\+Respawn\+In\+This\+Checkpoint}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{On\+Player\+Respawn\+In\+This\+Checkpoint(\+Checkpoint checkpoint, Player player)}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Enemy\+Ai.\+On\+Player\+Respawn\+In\+This\+Checkpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Checkpoint}}]{checkpoint, }
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}\label{class_simple_enemy_ai_ad4045de41577b6232f046d710f2971a4}
+
+
+Zrespawnowanie przeciwnika w danym checkpoincie razem z graczem. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em checkpoint} & \\
+\hline
+{\em player} & \\
+\hline
+\end{DoxyParams}
+Ustawienie jego kierunku.
+
+Ustawienie jego skali w świecie gry jako domyœlnej.
+
+Ustawienie pozycji początkowej.
+
+Aktywowanie obiektu przeciwnika w świecie gry. 
+
+Implementuje {\bf I\+Player\+Respawn\+Listener} \doxyref{}{str.}{interface_i_player_respawn_listener}.
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Start@{Start}}
+\index{Start@{Start}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Enemy\+Ai.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simple_enemy_ai_a64a4274eed9b9b586c7ec70d0066a727}
+
+
+Ustawienie parametrów początkowych\+: kontrolera, kierunku i pozycji początkowej. 
+
+Domyślnie porusza się w lewo. \index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Take\+Damage@{Take\+Damage}}
+\index{Take\+Damage@{Take\+Damage}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Take\+Damage(int damage, Game\+Object instigator)}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Enemy\+Ai.\+Take\+Damage (
+\begin{DoxyParamCaption}
+\item[{int}]{damage, }
+\item[{Game\+Object}]{instigator}
+\end{DoxyParamCaption}
+)}\label{class_simple_enemy_ai_a06d025942faa857d353febf6f217bcdc}
+
+
+Metoda wywoływana po otrzymaniu obrażeń od gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em damage} & \\
+\hline
+{\em instigator} & \\
+\hline
+\end{DoxyParams}
+Przyznanie punktów graczowi za zestrzelenie wroga.
+
+Uruchomeinie efektu zestrzelenia przeciwnika.
+
+Ustawienie obiektu przeciwnika jako niekatywnego. 
+
+Implementuje {\bf I\+Take\+Damage} \doxyref{}{str.}{interface_i_take_damage}.
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Update@{Update}}
+\index{Update@{Update}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Enemy\+Ai.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_simple_enemy_ai_a8e8cd468827d9edd2b337002d55ade58}
+
+
+Aktualizacja położenia przeciwnika oraz obsługa strzelania pociskami. 
+
+Wykonanie ruchu przez przeciwnika.
+
+Po napotkaniu przeszkody, przeciwnik porusza się w odwrotnym kierunku.
+
+Sprawdzenie czy upłynął czas potrzebny do wystrzelenia nowrgo pocisku.
+
+Sprawdzenie czy gracz zostaje trafiony przez pocisk (jest w zasięgu strzału przeciwnika).
+
+Stworzenie zmiennej pocisku.
+
+Inicjalizacja pocisku z ustawioną prędkością i kierunkiem.
+
+Ustawienie częstotliowości oddawania strzałów.
+
+Uruchomienie dźwięku wystrzału pocisku przez przeciwnika. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Destroyed\+Effect@{Destroyed\+Effect}}
+\index{Destroyed\+Effect@{Destroyed\+Effect}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Destroyed\+Effect}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Simple\+Enemy\+Ai.\+Destroyed\+Effect}\label{class_simple_enemy_ai_ab3acba0e0566f03ff2512182f453f423}
+
+
+Efekt zniszczenia przeciwnika. 
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Fire\+Rate@{Fire\+Rate}}
+\index{Fire\+Rate@{Fire\+Rate}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}float Simple\+Enemy\+Ai.\+Fire\+Rate = 1}\label{class_simple_enemy_ai_a1798faa2837dca4a9ab935bebac1a295}
+
+
+Częstotliwość oddawania strzałów przez przeciwnika. 
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Points\+To\+Give\+Player@{Points\+To\+Give\+Player}}
+\index{Points\+To\+Give\+Player@{Points\+To\+Give\+Player}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Points\+To\+Give\+Player}]{\setlength{\rightskip}{0pt plus 5cm}int Simple\+Enemy\+Ai.\+Points\+To\+Give\+Player}\label{class_simple_enemy_ai_ad82e14f2330c7c180a10b66bd83de177}
+
+
+Punkty przyznawane graczowi za zestrzelenie przeciwnika. 
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Projectile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projectile} Simple\+Enemy\+Ai.\+Projectile}\label{class_simple_enemy_ai_a26027ac987933b4aaadeb94c51bccbb3}
+
+
+Pocisk. 
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Shoot\+Sound@{Shoot\+Sound}}
+\index{Shoot\+Sound@{Shoot\+Sound}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Shoot\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip Simple\+Enemy\+Ai.\+Shoot\+Sound}\label{class_simple_enemy_ai_a924901f31131a3b8fb3fff3e39ccb927}
+
+
+Dwięk strzału przeciwnika. 
+
+\index{Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}!Speed@{Speed}}
+\index{Speed@{Speed}!Simple\+Enemy\+Ai@{Simple\+Enemy\+Ai}}
+\subsubsection[{Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Simple\+Enemy\+Ai.\+Speed}\label{class_simple_enemy_ai_a78b91ea3da1dc65b7f93eadc8ef1d8e6}
+
+
+Prędkość przeciwnika. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Simple\+Enemy\+Ai.\+cs\end{DoxyCompactItemize}

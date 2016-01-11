@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jumpbehavior',['JumpBehavior',['../class_controller_parameters2_d.html#a2838d319f4380bc1120750fdff3dd22f',1,'ControllerParameters2D']]]
+  ['followtype',['FollowType',['../class_follow_path.html#aa15222ed17c7bb53f199e5cb5e5c9cef',1,'FollowPath']]]
 ];

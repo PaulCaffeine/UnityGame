@@ -1,0 +1,91 @@
+\section{Dokumentacja klasy Player\+Bounds}
+\label{class_player_bounds}\index{Player\+Bounds@{Player\+Bounds}}
+
+
+Klasa ograniczająca mozliwy ruch gracza jedynie w zakresie widzialnego istniejącego poziomu.  
+
+
+Diagram dziedziczenia dla Player\+Bounds\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_bounds}
+\end{center}
+\end{figure}
+\subsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Bounds\+Behavior} \{ {\bfseries Nothing}, 
+{\bfseries Constrain}, 
+{\bfseries Kill}
+ \}\begin{DoxyCompactList}\small\item\em Możliwe opcje akcji po przekroczeniu przez gracza dozwolonych granic poziomu, czyli nie robienie niczego, śmierć, lub ograniczenie ruchu. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Start} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizacja obiektu gracza i box collidera. \end{DoxyCompactList}\item 
+void {\bf Update} ()
+\begin{DoxyCompactList}\small\item\em Korygowanie położenia gracza po przekroczeniu granic poziomu, uwzględniając granice\+: górną, dolną, po prawej stronie ekranu oraz po lewej stronie ekranu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Box\+Collider2\+D {\bfseries Bounds}\label{class_player_bounds_a02b847bc2cb2462b058462f8638c02c5}
+
+\item 
+{\bf Bounds\+Behavior} {\bfseries Above}\label{class_player_bounds_ab305ba21109a7a08d6f76556ed2beb29}
+
+\item 
+{\bf Bounds\+Behavior} {\bfseries Below}\label{class_player_bounds_ae1a36c22e63c4142e1ff336031a783fc}
+
+\item 
+{\bf Bounds\+Behavior} {\bfseries Left}\label{class_player_bounds_aba283a79471d6b0b3193a253a6a39df4}
+
+\item 
+{\bf Bounds\+Behavior} {\bfseries Right}\label{class_player_bounds_a66f6fea9ec80550b8929561160bd1144}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa ograniczająca mozliwy ruch gracza jedynie w zakresie widzialnego istniejącego poziomu. 
+
+
+
+\subsection{Dokumentacja składowych wyliczanych}
+\index{Player\+Bounds@{Player\+Bounds}!Bounds\+Behavior@{Bounds\+Behavior}}
+\index{Bounds\+Behavior@{Bounds\+Behavior}!Player\+Bounds@{Player\+Bounds}}
+\subsubsection[{Bounds\+Behavior}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Player\+Bounds.\+Bounds\+Behavior}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_player_bounds_a5ce066d86d3a67d29e60c4cc10e198ae}
+
+
+Możliwe opcje akcji po przekroczeniu przez gracza dozwolonych granic poziomu, czyli nie robienie niczego, śmierć, lub ograniczenie ruchu. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Player\+Bounds@{Player\+Bounds}!Start@{Start}}
+\index{Start@{Start}!Player\+Bounds@{Player\+Bounds}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Bounds.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_bounds_aff199ace2c6b71598662d119ba267d20}
+
+
+Inicjalizacja obiektu gracza i box collidera. 
+
+\index{Player\+Bounds@{Player\+Bounds}!Update@{Update}}
+\index{Update@{Update}!Player\+Bounds@{Player\+Bounds}}
+\subsubsection[{Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Bounds.\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_player_bounds_a297bf377a686191be8b798d4e8be1f39}
+
+
+Korygowanie położenia gracza po przekroczeniu granic poziomu, uwzględniając granice\+: górną, dolną, po prawej stronie ekranu oraz po lewej stronie ekranu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Player\+Bounds.\+cs\end{DoxyCompactItemize}

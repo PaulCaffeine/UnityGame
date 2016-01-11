@@ -1,0 +1,72 @@
+.TH "GameManager" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameManager \- Klasa odpowiedzialna za naliczanie i resetowanie punktów podczas gry\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBReset\fP ()"
+.br
+.RI "\fIWyzerowanie punktów\&. \fP"
+.ti -1c
+.RI "void \fBResetPoints\fP (int points)"
+.br
+.RI "\fIUstawienie ilości punktów na wartość podaną w parametrze\&. \fP"
+.ti -1c
+.RI "void \fBAddPoints\fP (int pointsToAdd)"
+.br
+.RI "\fIDodanie punktów\&. \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "static \fBGameManager\fP \fBInstance\fP\fC [get]\fP"
+.br
+.ti -1c
+.RI "int \fBPoints\fP\fC [get]\fP"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa odpowiedzialna za naliczanie i resetowanie punktów podczas gry\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void GameManager\&.AddPoints (int pointsToAdd)"
+
+.PP
+Dodanie punktów\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIpointsToAdd\fP 
+.RE
+.PP
+
+.SS "void GameManager\&.Reset ()"
+
+.PP
+Wyzerowanie punktów\&. 
+.SS "void GameManager\&.ResetPoints (int points)"
+
+.PP
+Ustawienie ilości punktów na wartość podaną w parametrze\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIpoints\fP 
+.RE
+.PP
+
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

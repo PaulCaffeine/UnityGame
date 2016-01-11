@@ -1,0 +1,75 @@
+.TH "PlayerBounds" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerBounds \- Klasa ograniczająca mozliwy ruch gracza jedynie w zakresie widzialnego istniejącego poziomu\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Typy publiczne"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBoundsBehavior\fP { \fBNothing\fP, \fBConstrain\fP, \fBKill\fP }
+.RI "\fIMożliwe opcje akcji po przekroczeniu przez gracza dozwolonych granic poziomu, czyli nie robienie niczego, śmierć, lub ograniczenie ruchu\&. \fP""
+.br
+.in -1c
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.RI "\fIInicjalizacja obiektu gracza i box collidera\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIKorygowanie położenia gracza po przekroczeniu granic poziomu, uwzględniając granice: górną, dolną, po prawej stronie ekranu oraz po lewej stronie ekranu\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "BoxCollider2D \fBBounds\fP"
+.br
+.ti -1c
+.RI "\fBBoundsBehavior\fP \fBAbove\fP"
+.br
+.ti -1c
+.RI "\fBBoundsBehavior\fP \fBBelow\fP"
+.br
+.ti -1c
+.RI "\fBBoundsBehavior\fP \fBLeft\fP"
+.br
+.ti -1c
+.RI "\fBBoundsBehavior\fP \fBRight\fP"
+.br
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa ograniczająca mozliwy ruch gracza jedynie w zakresie widzialnego istniejącego poziomu\&. 
+
+
+.SH "Dokumentacja składowych wyliczanych"
+.PP 
+.SS "enum \fBPlayerBounds\&.BoundsBehavior\fP\fC [strong]\fP"
+
+.PP
+Możliwe opcje akcji po przekroczeniu przez gracza dozwolonych granic poziomu, czyli nie robienie niczego, śmierć, lub ograniczenie ruchu\&. 
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void PlayerBounds\&.Start ()"
+
+.PP
+Inicjalizacja obiektu gracza i box collidera\&. 
+.SS "void PlayerBounds\&.Update ()"
+
+.PP
+Korygowanie położenia gracza po przekroczeniu granic poziomu, uwzględniając granice: górną, dolną, po prawej stronie ekranu oraz po lewej stronie ekranu\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

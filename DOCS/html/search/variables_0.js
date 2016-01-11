@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['backgrounds',['Backgrounds',['../class_background_parallax.html#a626641e92b9bedfbd0f5aaf2938875b3',1,'BackgroundParallax']]],
-  ['bounds',['Bounds',['../class_camera_controller.html#aad472aa9d9410f6b05884b0d4d336d45',1,'CameraController']]]
+  ['animator',['Animator',['../class_pathed_projectile_spawner.html#a3edee672c39ada316ed3ec99686a8b42',1,'PathedProjectileSpawner.Animator()'],['../class_point_star.html#af6c617a7e1d16f5a5b78fdb7f17ad5f6',1,'PointStar.Animator()']]]
 ];

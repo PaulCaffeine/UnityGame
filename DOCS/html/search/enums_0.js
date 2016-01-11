@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['followtype',['FollowType',['../class_follow_path.html#aa15222ed17c7bb53f199e5cb5e5c9cef',1,'FollowPath']]]
+  ['boundsbehavior',['BoundsBehavior',['../class_player_bounds.html#a5ce066d86d3a67d29e60c4cc10e198ae',1,'PlayerBounds']]]
 ];

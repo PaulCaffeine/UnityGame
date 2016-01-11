@@ -1,0 +1,197 @@
+.TH "Projectile" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Projectile \- Podstawowa klasa pocisku\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.PP
+Dziedziczona przez \fBSimpleProjectile\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitialize\fP (GameObject owner, Vector2 direction, Vector2 initialVelocity)"
+.br
+.RI "\fIInicjalizacja pocisku, pobierająca kierunek strzału, prędkość obiektu strzelającego, oraz obiekt strzelający jako parametry\&. \fP"
+.ti -1c
+.RI "virtual void \fBOnInitialized\fP ()"
+.br
+.RI "\fIPusta metoda, którą mogą zaimplementować klasy potomne\&. \fP"
+.ti -1c
+.RI "virtual void \fBOnTriggerEnter2D\fP (Collider2D other)"
+.br
+.RI "\fIMetoda wywoływana po zderzeniu pocisku z innym obiektem\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "float \fBSpeed\fP"
+.br
+.RI "\fIPrędkość pocisku\&. \fP"
+.ti -1c
+.RI "LayerMask \fBCollisionMask\fP"
+.br
+.RI "\fIWarstwa kolizji pocisku z otoczeniem\&. \fP"
+.in -1c
+.SS "Metody chronione"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBOnNotCollideWith\fP (Collider2D other)"
+.br
+.RI "\fIPusta metoda, którą mogą zaimplementować klasy potomne\&. \fP"
+.ti -1c
+.RI "virtual void \fBOnCollideOwner\fP ()"
+.br
+.RI "\fIPusta metoda, którą mogą zaimplementować klasy potomne\&. \fP"
+.ti -1c
+.RI "virtual void \fBOnCollideTakeDamage\fP (Collider2D other, \fBITakeDamage\fP takeDamage)"
+.br
+.RI "\fIPusta metoda, którą mogą zaimplementować klasy potomne\&. \fP"
+.ti -1c
+.RI "virtual void \fBOnCollideOther\fP (Collider2D other)"
+.br
+.RI "\fIPusta metoda, którą mogą zaimplementować klasy potomne\&. \fP"
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "GameObject \fBOwner\fP\fC [get]\fP"
+.br
+.RI "\fIObiekt, który wystrzeli pocisk\&. \fP"
+.ti -1c
+.RI "Vector2 \fBDirection\fP\fC [get]\fP"
+.br
+.RI "\fIKierunek strzału\&. \fP"
+.ti -1c
+.RI "Vector2 \fBInitialVelocity\fP\fC [get]\fP"
+.br
+.RI "\fIPrędkość obiektu-właściciela pocisku, która później jest dodawana do prędkości pocisku podczas wystrzału\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Podstawowa klasa pocisku\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void Projectile\&.Initialize (GameObject owner, Vector2 direction, Vector2 initialVelocity)"
+
+.PP
+Inicjalizacja pocisku, pobierająca kierunek strzału, prędkość obiektu strzelającego, oraz obiekt strzelający jako parametry\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIowner\fP 
+.br
+\fIdirection\fP 
+.br
+\fIinitialVelocity\fP 
+.RE
+.PP
+Ustawienie kierunku pocisku\&.
+.PP
+Ustawienie obiektu oddającego strzał\&.
+.PP
+Ustawienie kierunku strzału\&.
+.PP
+Ustawienie początkowej prędkości strzału\&. 
+.SS "virtual void Projectile\&.OnCollideOther (Collider2D other)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Pusta metoda, którą mogą zaimplementować klasy potomne\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBSimpleProjectile\fP\&.
+.SS "virtual void Projectile\&.OnCollideOwner ()\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Pusta metoda, którą mogą zaimplementować klasy potomne\&. 
+.SS "virtual void Projectile\&.OnCollideTakeDamage (Collider2D other, \fBITakeDamage\fP takeDamage)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Pusta metoda, którą mogą zaimplementować klasy potomne\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.br
+\fItakeDamage\fP 
+.RE
+.PP
+
+.PP
+Reimplementowana w \fBSimpleProjectile\fP\&.
+.SS "virtual void Projectile\&.OnInitialized ()\fC [virtual]\fP"
+
+.PP
+Pusta metoda, którą mogą zaimplementować klasy potomne\&. 
+.SS "virtual void Projectile\&.OnNotCollideWith (Collider2D other)\fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Pusta metoda, którą mogą zaimplementować klasy potomne\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+
+.SS "virtual void Projectile\&.OnTriggerEnter2D (Collider2D other)\fC [virtual]\fP"
+
+.PP
+Metoda wywoływana po zderzeniu pocisku z innym obiektem\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+Pocisk zderzył się z czymś, co nie odpowiada masce kolizji\&.
+.PP
+Pocisk zderzył się z obiektem, który wystrzelił pocisk\&.
+.PP
+Pocisk zderzył się z obiektem, który może przyjmować obrażenia\&.
+.PP
+Żadne z powyższych\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "LayerMask Projectile\&.CollisionMask"
+
+.PP
+Warstwa kolizji pocisku z otoczeniem\&. 
+.SS "float Projectile\&.Speed"
+
+.PP
+Prędkość pocisku\&. 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "Vector2 Projectile\&.Direction\fC [get]\fP"
+
+.PP
+Kierunek strzału\&. 
+.SS "Vector2 Projectile\&.InitialVelocity\fC [get]\fP"
+
+.PP
+Prędkość obiektu-właściciela pocisku, która później jest dodawana do prędkości pocisku podczas wystrzału\&. 
+.SS "GameObject Projectile\&.Owner\fC [get]\fP"
+
+.PP
+Obiekt, który wystrzeli pocisk\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

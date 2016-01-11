@@ -1,0 +1,126 @@
+.TH "PointStar" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PointStar \- Klasa przyznająca punkty za zebranie gwiazdek\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour i \fBIPlayerRespawnListener\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnTriggerEnter2D\fP (Collider2D other)"
+.br
+.RI "\fIPo wejściu na gwiazdkę inicjowany jest efekt, a sam obiekt znika\&. \fP"
+.ti -1c
+.RI "void \fBFinishAnimationEvent\fP ()"
+.br
+.RI "\fIPo skończeniu animacji, tekstura jest nieaktywna\&. \fP"
+.ti -1c
+.RI "void \fBOnPlayerRespawnInThisCheckpoint\fP (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+.br
+.RI "\fIPo respawnie gracza, odtwarzane są gwiazdki zdobyte od czasu osiągnięcia ostatniego checkpointu\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "GameObject \fBEffect\fP"
+.br
+.RI "\fIEfektem jest chmura żółtych cząsteczek\&. \fP"
+.ti -1c
+.RI "int \fBPointsToAdd\fP = 10"
+.br
+.RI "\fILiczba punktów dodawana za zebranie gwiazdki\&. \fP"
+.ti -1c
+.RI "AudioClip \fBHitStarSound\fP"
+.br
+.RI "\fIDźwięk odtwarzany po zebraniu gwiazdki\&. \fP"
+.ti -1c
+.RI "Animator \fBAnimator\fP"
+.br
+.RI "\fIObiekt animacji potrzebny do ustawienia efektu przejścia\&. \fP"
+.ti -1c
+.RI "SpriteRenderer \fBRenderer\fP"
+.br
+.RI "\fITekstura gwiazdki\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa przyznająca punkty za zebranie gwiazdek\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void PointStar\&.FinishAnimationEvent ()"
+
+.PP
+Po skończeniu animacji, tekstura jest nieaktywna\&. 
+.SS "void PointStar\&.OnPlayerRespawnInThisCheckpoint (\fBCheckpoint\fP checkpoint, \fBPlayer\fP player)"
+
+.PP
+Po respawnie gracza, odtwarzane są gwiazdki zdobyte od czasu osiągnięcia ostatniego checkpointu\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIcheckpoint\fP 
+.br
+\fIplayer\fP 
+.RE
+.PP
+
+.PP
+Implementuje \fBIPlayerRespawnListener\fP\&.
+.SS "void PointStar\&.OnTriggerEnter2D (Collider2D other)"
+
+.PP
+Po wejściu na gwiazdkę inicjowany jest efekt, a sam obiekt znika\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIother\fP 
+.RE
+.PP
+Wyjście, jeśli gwiazdka została już zebrana\&.
+.PP
+Odtworzenie efektu dźwiękowego\&.
+.PP
+Dodanie punktów\&.
+.PP
+Inicjowanie efektu graficznego\&.
+.PP
+Wyświetlenie komunikatu tekstowego\&.
+.PP
+metoda wyswietli tekst przez 1,5s, bedzie on sie poruszal z predkoscia 50 pixeli na sekunde
+.PP
+Ustawienie gwiazdki jako zebranej\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "Animator PointStar\&.Animator"
+
+.PP
+Obiekt animacji potrzebny do ustawienia efektu przejścia\&. 
+.SS "GameObject PointStar\&.Effect"
+
+.PP
+Efektem jest chmura żółtych cząsteczek\&. 
+.SS "AudioClip PointStar\&.HitStarSound"
+
+.PP
+Dźwięk odtwarzany po zebraniu gwiazdki\&. 
+.SS "int PointStar\&.PointsToAdd = 10"
+
+.PP
+Liczba punktów dodawana za zebranie gwiazdki\&. 
+.SS "SpriteRenderer PointStar\&.Renderer"
+
+.PP
+Tekstura gwiazdki\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

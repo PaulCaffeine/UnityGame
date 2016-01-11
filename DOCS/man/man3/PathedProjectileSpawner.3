@@ -1,0 +1,107 @@
+.TH "PathedProjectileSpawner" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PathedProjectileSpawner \- Tworzenie pocisku poruszającego się po danej ścieżce\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBStart\fP ()"
+.br
+.RI "\fIUstawienie początkowej wartości czasu kolejnego wystrzału na częstotliwość oddawania strzałów\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIMetoda odmierzająca czas do kolejnego wystrzału, inicjująca obiekt pocisku w danym położeniu, o danej prędkości i wyznaczonym celu\&. Odpowiada również za inicjowanie efektu stworzenia pocisku w świecie gry oraz odtworzenie dźwięku\&. \fP"
+.ti -1c
+.RI "void \fBOnDrawGizmos\fP ()"
+.br
+.RI "\fITworzenie czerwonej linii w widoku Scene podczas wystrzału, od jego źródła do celu\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "Transform \fBDestination\fP"
+.br
+.RI "\fICel\&. \fP"
+.ti -1c
+.RI "\fBPathedProjectile\fP \fBProjectile\fP"
+.br
+.RI "\fIObiekt pocisku\&. \fP"
+.ti -1c
+.RI "GameObject \fBSpawnEffect\fP"
+.br
+.ti -1c
+.RI "float \fBSpeed\fP"
+.br
+.RI "\fIPrędkość pocisku\&. \fP"
+.ti -1c
+.RI "float \fBFireRate\fP"
+.br
+.RI "\fICzęstotliwość oddawania strzałów\&. \fP"
+.ti -1c
+.RI "AudioClip \fBSpawnProjectileSound\fP"
+.br
+.RI "\fIDźwięk odtwarzany podczas wystrzału pocisku\&. \fP"
+.ti -1c
+.RI "Animator \fBAnimator\fP"
+.br
+.RI "\fIObiekt animacji potrzebny do ustawienia efektu przejścia\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Tworzenie pocisku poruszającego się po danej ścieżce\&. 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void PathedProjectileSpawner\&.OnDrawGizmos ()"
+
+.PP
+Tworzenie czerwonej linii w widoku Scene podczas wystrzału, od jego źródła do celu\&. 
+.SS "void PathedProjectileSpawner\&.Start ()"
+
+.PP
+Ustawienie początkowej wartości czasu kolejnego wystrzału na częstotliwość oddawania strzałów\&. 
+.SS "void PathedProjectileSpawner\&.Update ()"
+
+.PP
+Metoda odmierzająca czas do kolejnego wystrzału, inicjująca obiekt pocisku w danym położeniu, o danej prędkości i wyznaczonym celu\&. Odpowiada również za inicjowanie efektu stworzenia pocisku w świecie gry oraz odtworzenie dźwięku\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "Animator PathedProjectileSpawner\&.Animator"
+
+.PP
+Obiekt animacji potrzebny do ustawienia efektu przejścia\&. 
+.SS "Transform PathedProjectileSpawner\&.Destination"
+
+.PP
+Cel\&. 
+.SS "float PathedProjectileSpawner\&.FireRate"
+
+.PP
+Częstotliwość oddawania strzałów\&. 
+.SS "\fBPathedProjectile\fP PathedProjectileSpawner\&.Projectile"
+
+.PP
+Obiekt pocisku\&. 
+.SS "AudioClip PathedProjectileSpawner\&.SpawnProjectileSound"
+
+.PP
+Dźwięk odtwarzany podczas wystrzału pocisku\&. 
+.SS "float PathedProjectileSpawner\&.Speed"
+
+.PP
+Prędkość pocisku\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcdfghijlmoprstuv",
-  1: "bcfjps",
-  2: "acghjlorstu",
-  3: "bdgjlmpst",
-  4: "fj",
-  5: "chipsv"
+  0: "abcdefghijklmoprstuv",
+  1: "abcfghijlps",
+  2: "acfghijkloprstu",
+  3: "abcdefghjlmoprst",
+  4: "bfj",
+  5: "cdhioprstv"
 };
 
 var indexSectionNames =
@@ -21,10 +21,10 @@ var indexSectionNames =
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
-  2: "Functions",
-  3: "Variables",
-  4: "Enumerations",
-  5: "Properties"
+  1: "Klasy",
+  2: "Funkcje",
+  3: "Zmienne",
+  4: "Wyliczenia",
+  5: "Właściwości"
 };
 

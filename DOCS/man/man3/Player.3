@@ -1,0 +1,246 @@
+.TH "Player" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Player \- klasa \fBPlayer\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy MonoBehaviour i \fBITakeDamage\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "\fIUstawianie początkowych ustawień gracza\&. \fP"
+.ti -1c
+.RI "void \fBUpdate\fP ()"
+.br
+.RI "\fIWywolywane dla kazdej klatki animacji gry\&. Wywolanie metody HandleImput(), obslugujacej nacisniecie klawiszy przez gracza\&. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi\&. \fP"
+.ti -1c
+.RI "void \fBFinishLevel\fP ()"
+.br
+.RI "\fIMetoda uruchamiana po przejściu danego poziomu gry\&. Deaktywuje ona BoxCollider2D i ruch gracza\&. \fP"
+.ti -1c
+.RI "void \fBKill\fP ()"
+.br
+.RI "\fIZresetowanie ustawień gracza po śmierci\&. \fP"
+.ti -1c
+.RI "void \fBRespawnAt\fP (Transform spawnPoint)"
+.br
+.RI "\fIRespawnowanie gracza w danym punkcie i zmiana jego ustawień początkowych\&. \fP"
+.ti -1c
+.RI "void \fBTakeDamage\fP (int damage, GameObject instagator)"
+.br
+.RI "\fIInicjowanie efektu obrażeń gracza (czerwona chmura cząsteczek) oraz zmniejszenie punktów zdrowia gracza po zadanych obrażeniach, prowadzące ewentualnie do jego śmierci\&. \fP"
+.ti -1c
+.RI "void \fBGiveHealth\fP (int health, GameObject instagator)"
+.br
+.RI "\fIDodanie punktów zdrowia po zebraniu apteczki\&. \fP"
+.ti -1c
+.RI "void \fBHandleInput\fP ()"
+.br
+.RI "\fIObsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot\&. Nacisniecie spacji wykonuje skok\&. \fP"
+.in -1c
+.SS "Atrybuty publiczne"
+
+.in +1c
+.ti -1c
+.RI "float \fBMaxSpeed\fP = 8"
+.br
+.RI "\fIMaksymalna liczba jednostek na sekunde, jakie gracz moze przejsc\&. \fP"
+.ti -1c
+.RI "float \fBSpeedAccelerationOnGround\fP = 10f"
+.br
+.RI "\fIJak szybko moze zmienic sie predkosc gracza na ziemi\&. \fP"
+.ti -1c
+.RI "float \fBSpeedAccelerationInAir\fP = 5f"
+.br
+.RI "\fIJak szybko moze zmienic sie predkosc gracza w powietrzu \fP"
+.ti -1c
+.RI "int \fBMaxHealth\fP = 100"
+.br
+.RI "\fIMaksymalna wartość punktów zdrowia\&. \fP"
+.ti -1c
+.RI "GameObject \fBOuchEffect\fP"
+.br
+.RI "\fIEfekt wyzwalany podczas otrzymania obrażeń\&. \fP"
+.ti -1c
+.RI "\fBProjectile\fP \fBProjectile\fP"
+.br
+.RI "\fIPiła \fP"
+.ti -1c
+.RI "float \fBFireRate\fP"
+.br
+.RI "\fICzęstotliwość z którą strzela \fP"
+.ti -1c
+.RI "Transform \fBProjectileFireLocation\fP"
+.br
+.RI "\fILokalizacja Piły\&. \fP"
+.ti -1c
+.RI "GameObject \fBFireProjectileEffect\fP"
+.br
+.RI "\fIFire projectile effect\&. \fP"
+.ti -1c
+.RI "AudioClip \fBPlayerHitSound\fP"
+.br
+.RI "\fIDźwięk odtwarzany po trafieniu gracza przez wroga\&. \fP"
+.ti -1c
+.RI "AudioClip \fBPlayerShootSound\fP"
+.br
+.RI "\fIDźwięk odtwarzany po wystrzeleniu pocisku przez gracza\&. \fP"
+.ti -1c
+.RI "AudioClip \fBPlayerHealthSound\fP"
+.br
+.RI "\fIDźwięk odtwarzany po zebraniu apteczki przez gracza\&. \fP"
+.ti -1c
+.RI "Animator \fBAnimator\fP"
+.br
+.in -1c
+.SS "Właściwości"
+
+.in +1c
+.ti -1c
+.RI "int \fBHealth\fP\fC [get]\fP"
+.br
+.RI "\fIWartośc punktów zdrowia\&. \fP"
+.ti -1c
+.RI "bool \fBIsDead\fP\fC [get]\fP"
+.br
+.RI "\fIZmienna bool służąca do zapamiętania informacji o śmierci gracza\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+klasa \fBPlayer\fP 
+
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "void Player\&.Awake ()"
+
+.PP
+Ustawianie początkowych ustawień gracza\&. Jesli gracz jest obrocony, wartosc localScale\&.x bedzie mniejsza od 0\&.
+.PP
+Punkty zdrowia mają wartość maksymalną\&. 
+.SS "void Player\&.FinishLevel ()"
+
+.PP
+Metoda uruchamiana po przejściu danego poziomu gry\&. Deaktywuje ona BoxCollider2D i ruch gracza\&. 
+.SS "void Player\&.GiveHealth (int health, GameObject instagator)"
+
+.PP
+Dodanie punktów zdrowia po zebraniu apteczki\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIhealth\fP 
+.br
+\fIinstagator\fP 
+.RE
+.PP
+Health += Mathf\&.Min(Health + health, MaxHealth); 
+.SS "void Player\&.HandleInput ()"
+
+.PP
+Obsluga interakcji gracza (nacisniecia klawisza A lub D), umozliwiajaca obrot\&. Nacisniecie spacji wykonuje skok\&. 
+.SS "void Player\&.Kill ()"
+
+.PP
+Zresetowanie ustawień gracza po śmierci\&. Gracz lekko podskakuje pionowo po śmierci\&. 
+.SS "void Player\&.RespawnAt (Transform spawnPoint)"
+
+.PP
+Respawnowanie gracza w danym punkcie i zmiana jego ustawień początkowych\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIspawnPoint\fP 
+.RE
+.PP
+
+.SS "void Player\&.TakeDamage (int damage, GameObject instagator)"
+
+.PP
+Inicjowanie efektu obrażeń gracza (czerwona chmura cząsteczek) oraz zmniejszenie punktów zdrowia gracza po zadanych obrażeniach, prowadzące ewentualnie do jego śmierci\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIdamage\fP 
+.RE
+.PP
+
+.PP
+Implementuje \fBITakeDamage\fP\&.
+.SS "void Player\&.Update ()"
+
+.PP
+Wywolywane dla kazdej klatki animacji gry\&. Wywolanie metody HandleImput(), obslugujacej nacisniecie klawiszy przez gracza\&. Ustawiana jest predkosc w poziomie, zalezna od kierunku zwrotu gracza, oraz tego czy znajduje sie w powietrzu lub na ziemi\&. Aktualizacja czasu przeładowywania broni\&.
+.PP
+Ustawienie wartości prędkości jako liczby między 0, a 1\&. 
+.SH "Dokumentacja atrybutów składowych"
+.PP 
+.SS "GameObject Player\&.FireProjectileEffect"
+
+.PP
+Fire projectile effect\&. 
+.SS "float Player\&.FireRate"
+
+.PP
+Częstotliwość z którą strzela 
+.SS "int Player\&.MaxHealth = 100"
+
+.PP
+Maksymalna wartość punktów zdrowia\&. 
+.SS "float Player\&.MaxSpeed = 8"
+
+.PP
+Maksymalna liczba jednostek na sekunde, jakie gracz moze przejsc\&. 
+.SS "GameObject Player\&.OuchEffect"
+
+.PP
+Efekt wyzwalany podczas otrzymania obrażeń\&. 
+.SS "AudioClip Player\&.PlayerHealthSound"
+
+.PP
+Dźwięk odtwarzany po zebraniu apteczki przez gracza\&. 
+.SS "AudioClip Player\&.PlayerHitSound"
+
+.PP
+Dźwięk odtwarzany po trafieniu gracza przez wroga\&. 
+.SS "AudioClip Player\&.PlayerShootSound"
+
+.PP
+Dźwięk odtwarzany po wystrzeleniu pocisku przez gracza\&. 
+.SS "\fBProjectile\fP Player\&.Projectile"
+
+.PP
+Piła 
+.SS "Transform Player\&.ProjectileFireLocation"
+
+.PP
+Lokalizacja Piły\&. 
+.SS "float Player\&.SpeedAccelerationInAir = 5f"
+
+.PP
+Jak szybko moze zmienic sie predkosc gracza w powietrzu 
+.SS "float Player\&.SpeedAccelerationOnGround = 10f"
+
+.PP
+Jak szybko moze zmienic sie predkosc gracza na ziemi\&. 
+.SH "Dokumentacja właściwości"
+.PP 
+.SS "int Player\&.Health\fC [get]\fP"
+
+.PP
+Wartośc punktów zdrowia\&. 
+.SS "bool Player\&.IsDead\fC [get]\fP"
+
+.PP
+Zmienna bool służąca do zapamiętania informacji o śmierci gracza\&. 
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.

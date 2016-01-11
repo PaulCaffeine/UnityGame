@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gravity',['Gravity',['../class_controller_parameters2_d.html#ae83e87db83f426c232a43dd15e30fb38',1,'ControllerParameters2D']]]
+  ['collisionmask',['CollisionMask',['../class_projectile.html#a45d75a6361f9a64b50291ab84622bcac',1,'Projectile']]]
 ];

@@ -1,0 +1,104 @@
+\section{Dokumentacja klasy Checkpoint}
+\label{class_checkpoint}\index{Checkpoint@{Checkpoint}}
+
+
+Klasa odpowiedzialna za respawn gracza w danym checkpoincie.  
+
+
+Diagram dziedziczenia dla Checkpoint\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_checkpoint}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf Awake} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie listy listenerów obsługujących respawn obiektów wraz z graczem w kolejnych checkpointach. \end{DoxyCompactList}\item 
+void {\bf Player\+Hit\+Checkpoint} ()
+\begin{DoxyCompactList}\small\item\em Uruchomienie metody Player\+Hit\+Checkpoint\+Co, z aktualną wartością bonusu czasowego jako argumentem. \end{DoxyCompactList}\item 
+void {\bf Player\+Left\+Checkpoint} ()
+\begin{DoxyCompactList}\small\item\em Metoda wywoływana w razie opuszczenia checkpointu (nic nie robi). \end{DoxyCompactList}\item 
+void {\bf Spawn\+Player} ({\bf Player} player)
+\begin{DoxyCompactList}\small\item\em Respawnowanie gracza w miejscu, w którym znajduje się checkpoint. \end{DoxyCompactList}\item 
+void {\bf Assign\+Object\+To\+Checkpoint} ({\bf I\+Player\+Respawn\+Listener} listener)
+\begin{DoxyCompactList}\small\item\em Przydzielanie obiektów do checkpointów, które mają się zrespawnować po respawnie gracza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiedzialna za respawn gracza w danym checkpoincie. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Checkpoint@{Checkpoint}!Assign\+Object\+To\+Checkpoint@{Assign\+Object\+To\+Checkpoint}}
+\index{Assign\+Object\+To\+Checkpoint@{Assign\+Object\+To\+Checkpoint}!Checkpoint@{Checkpoint}}
+\subsubsection[{Assign\+Object\+To\+Checkpoint(\+I\+Player\+Respawn\+Listener listener)}]{\setlength{\rightskip}{0pt plus 5cm}void Checkpoint.\+Assign\+Object\+To\+Checkpoint (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Player\+Respawn\+Listener}}]{listener}
+\end{DoxyParamCaption}
+)}\label{class_checkpoint_a5fa902f81ee5c306bc6ed25d9ce62185}
+
+
+Przydzielanie obiektów do checkpointów, które mają się zrespawnować po respawnie gracza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em listener} & \\
+\hline
+\end{DoxyParams}
+\index{Checkpoint@{Checkpoint}!Awake@{Awake}}
+\index{Awake@{Awake}!Checkpoint@{Checkpoint}}
+\subsubsection[{Awake()}]{\setlength{\rightskip}{0pt plus 5cm}void Checkpoint.\+Awake (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_checkpoint_af3783fddf42967c30cfd022dfc582d79}
+
+
+Tworzenie listy listenerów obsługujących respawn obiektów wraz z graczem w kolejnych checkpointach. 
+
+\index{Checkpoint@{Checkpoint}!Player\+Hit\+Checkpoint@{Player\+Hit\+Checkpoint}}
+\index{Player\+Hit\+Checkpoint@{Player\+Hit\+Checkpoint}!Checkpoint@{Checkpoint}}
+\subsubsection[{Player\+Hit\+Checkpoint()}]{\setlength{\rightskip}{0pt plus 5cm}void Checkpoint.\+Player\+Hit\+Checkpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_checkpoint_a9dda39b239a45089698864768a4bd11c}
+
+
+Uruchomienie metody Player\+Hit\+Checkpoint\+Co, z aktualną wartością bonusu czasowego jako argumentem. 
+
+\index{Checkpoint@{Checkpoint}!Player\+Left\+Checkpoint@{Player\+Left\+Checkpoint}}
+\index{Player\+Left\+Checkpoint@{Player\+Left\+Checkpoint}!Checkpoint@{Checkpoint}}
+\subsubsection[{Player\+Left\+Checkpoint()}]{\setlength{\rightskip}{0pt plus 5cm}void Checkpoint.\+Player\+Left\+Checkpoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_checkpoint_a732b4b8be74672d68c011e03016270cd}
+
+
+Metoda wywoływana w razie opuszczenia checkpointu (nic nie robi). 
+
+\index{Checkpoint@{Checkpoint}!Spawn\+Player@{Spawn\+Player}}
+\index{Spawn\+Player@{Spawn\+Player}!Checkpoint@{Checkpoint}}
+\subsubsection[{Spawn\+Player(\+Player player)}]{\setlength{\rightskip}{0pt plus 5cm}void Checkpoint.\+Spawn\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}\label{class_checkpoint_a3b56b2963f8df54bee9e5647428bfcd5}
+
+
+Respawnowanie gracza w miejscu, w którym znajduje się checkpoint. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Paul/\+Projects/\+Unity\+Game/\+Projekt/\+Assets/\+Code/Checkpoint.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+.TH "FromWorldPointTextPositioner" 3 "Pn, 11 sty 2016" "Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FromWorldPointTextPositioner \- Klasa określająca parametry wyświetlanego tekstu w świecie gry\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Dziedziczy \fBIFloatingTextPositioner\fP\&.
+.SS "Metody publiczne"
+
+.in +1c
+.ti -1c
+.RI "\fBFromWorldPointTextPositioner\fP (Camera Camera, Vector3 worldPosition, float timeToLive, float speed)"
+.br
+.RI "\fIKonstruktor pozycjonera tekstu w grze, przyjmujący jako parametry pozycję tekstu w świecie gry, obiekt kamery, czas, przez jaki ma być wyświetlany tekst i prędkość poruszania się tekstu\&. \fP"
+.ti -1c
+.RI "bool \fBGetPosition\fP (ref Vector2 position, GUIContent content, Vector2 size)"
+.br
+.RI "\fIMetoda mówiąca \fBFloatingText\fP, czy dalej wyświetlać tekst\&. Ustawia również współrzędne tekstu w grze\&. \fP"
+.in -1c
+.SH "Opis szczegółowy"
+.PP 
+Klasa określająca parametry wyświetlanego tekstu w świecie gry\&. 
+
+
+.SH "Dokumentacja konstruktora i destruktora"
+.PP 
+.SS "FromWorldPointTextPositioner\&.FromWorldPointTextPositioner (Camera Camera, Vector3 worldPosition, float timeToLive, float speed)"
+
+.PP
+Konstruktor pozycjonera tekstu w grze, przyjmujący jako parametry pozycję tekstu w świecie gry, obiekt kamery, czas, przez jaki ma być wyświetlany tekst i prędkość poruszania się tekstu\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fICamera\fP 
+.br
+\fIworldPosition\fP 
+.br
+\fItimeToLive\fP 
+.br
+\fIspeed\fP 
+.RE
+.PP
+
+.SH "Dokumentacja funkcji składowych"
+.PP 
+.SS "bool FromWorldPointTextPositioner\&.GetPosition (ref Vector2 position, GUIContent content, Vector2 size)"
+
+.PP
+Metoda mówiąca \fBFloatingText\fP, czy dalej wyświetlać tekst\&. Ustawia również współrzędne tekstu w grze\&. 
+.PP
+\fBParametry:\fP
+.RS 4
+\fIposition\fP 
+.br
+\fIcontent\fP 
+.br
+\fIsize\fP 
+.RE
+.PP
+\fBZwraca:\fP
+.RS 4
+.RE
+.PP
+Jeśli podczas wyświetlania tekstu (dana klatka), upłynie czas życia napisu, metoda zwraca false\&. Klasa \fBFloatingText\fP niszczy wtedy tekst\&.
+.PP
+Środkujemy tekst na współrzędnych świata\&. 
+.PP
+Implementuje \fBIFloatingTextPositioner\fP\&.
+
+.SH "Autor"
+.PP 
+Wygenerowano automatycznie z kodu źródłowego programem Doxygen dla Game\&.
